@@ -5,7 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 
 export default function Index() {
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
       <View className="h-full items-center justify-center relative">
         <Image
           source={require('@/assets/images/logo.png')}
@@ -20,7 +20,6 @@ export default function Index() {
           Magtanim
         </Link>
       </View>
-      <StatusBar style="dark" />
     </SafeAreaView>
   );
 }

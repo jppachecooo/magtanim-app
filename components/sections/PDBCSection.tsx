@@ -23,7 +23,9 @@ export default function PDBCSection({ pests, diseases }: any) {
         description={pDBCDescription}
       />
       <View className="gap-y-2">
-        <Text className="text-lg font-bold">Pests</Text>
+        <Text className="text-lg font-bold text-black dark:text-secondary-default">
+          Pests
+        </Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {pests.map((pest: any) => (
             <Pressable
@@ -41,7 +43,9 @@ export default function PDBCSection({ pests, diseases }: any) {
         </View>
       </View>
       <View className="gap-y-2">
-        <Text className="text-lg font-bold">Deases</Text>
+        <Text className="text-lg font-bold text-black dark:text-secondary-default">
+          Deases
+        </Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {diseases.map((disease: any) => (
             <Pressable
@@ -61,7 +65,9 @@ export default function PDBCSection({ pests, diseases }: any) {
         </View>
       </View>
       <View className="gap-y-2">
-        <Text className="text-lg font-bold">Beneficial Critters</Text>
+        <Text className="text-lg font-bold text-black dark:text-secondary-default">
+          Beneficial Critters
+        </Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {diseases.map((disease: any) => (
             <View

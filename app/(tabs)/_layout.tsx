@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 export default function Tabslayout() {
   return (
-    <View className="flex-1 py-2 px-4 bg-secondary-100">
+    <View className="flex-1 py-2 px-4 bg-secondary-100 dark:bg-accent-200">
       <Tabs
         screenOptions={{
           headerShown: false,
@@ -15,14 +15,14 @@ export default function Tabslayout() {
           tabBarActiveTintColor: '#FDFEFE',
           tabBarHideOnKeyboard: true,
           tabBarStyle: {
-            height: 50,
+            height: 55,
             width: 260,
             backgroundColor: '#008000',
             borderRadius: 100,
             alignSelf: 'center',
             paddingBottom: 5,
             paddingHorizontal: 15,
-            borderWidth: 0,
+            borderTopWidth: 0,
           },
         }}
       >

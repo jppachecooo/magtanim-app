@@ -6,7 +6,7 @@ import Header from '@/components/ui/Header';
 
 export default function Favorites() {
   return (
-    <SafeAreaView className="flex-1 bg-secondary-100">
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
       <View>
         <Header title="Favorites" />
       </View>

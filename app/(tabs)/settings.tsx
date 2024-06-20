@@ -10,7 +10,7 @@ export default function Settings() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
 
   return (
-    <SafeAreaView className="flex-1 bg-secondary-100">
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
       <View className="space-y-8">
         <Header title="Settings" />
         <View>

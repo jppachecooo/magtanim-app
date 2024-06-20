@@ -13,7 +13,9 @@ const EmptyState: React.FC<EmptyStateProps> = ({ category }) => {
         className="w-52 h-52"
         resizeMode="contain"
       />
-      <Text className="font-bold">Crop not found</Text>
+      <Text className="font-bold text-black dark:text-secondary-default">
+        Crop not found
+      </Text>
       <Text className="text-xs text-secondary-200">
         Try to change the active category ({category})
       </Text>

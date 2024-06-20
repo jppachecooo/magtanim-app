@@ -14,10 +14,12 @@ export default function SeasonSelection() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-secondary-100 items-center justify-center space-y-8">
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200 items-center justify-center space-y-8">
       <View>
-        <Text className="text-lg text-center">Filter the list of crops</Text>
-        <Text className="text-lg text-center">
+        <Text className="text-lg text-center text-black dark:text-secondary-default">
+          Filter the list of crops
+        </Text>
+        <Text className="text-lg text-center text-black dark:text-secondary-default">
           by selecting a{' '}
           <Text className="text-lg font-bold text-primary-200">Season</Text>
         </Text>

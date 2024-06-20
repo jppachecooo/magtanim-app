@@ -6,7 +6,7 @@ import { useLocalSearchParams, useNavigation } from 'expo-router';
 import { Ionicons, Fontisto } from '@expo/vector-icons';
 
 import crops from '@/constants/crops';
-import HeaderSection from '@/components/sections/HeaderSection';
+import IDSection from '@/components/sections/IDSection';
 import QuickInfoSection from '@/components/sections/QuickInfoSection';
 import PDBCSection from '@/components/sections/PDBCSection';
 
@@ -17,7 +17,7 @@ export default function CropInformation() {
   const crop = crops.find((crop) => crop.id === id);
 
   return (
-    <SafeAreaView className="flex-1">
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
       <View className="p-4 gap-y-4">
         <View
           className="py-2 px-4
@@ -40,7 +40,7 @@ export default function CropInformation() {
         </View>
         <ScrollView showsVerticalScrollIndicator={false} className="space-y-4">
           <View>
-            <HeaderSection description={crop?.description} />
+            <IDSection description={crop?.description} />
           </View>
           <View>
             <QuickInfoSection crop={crop} />

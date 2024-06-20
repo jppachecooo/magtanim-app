@@ -5,6 +5,7 @@ import { AppContext } from '@/context/AppContext';
 import QInfoModal from '../modals/QInfoModal';
 
 import { EvilIcons } from '@expo/vector-icons';
+import { useColorScheme } from 'nativewind';
 
 const getSeasonIcon = (season: string | undefined) => {
   switch (season) {
@@ -20,6 +21,8 @@ const getSeasonIcon = (season: string | undefined) => {
 };
 
 export default function QuickInfoSection({ crop }: any) {
+  const { colorScheme } = useColorScheme();
+
   const { qInfoModalVisible, setQInfoModalVisible } = useContext(AppContext);
   const [qInfoModalTitle, setQInfoModalTitle] = useState<string>('');
   const [qInfoModalDescription, setQInfoModalDescription] =
@@ -47,7 +50,9 @@ export default function QuickInfoSection({ crop }: any) {
 
   return (
     <View className="gap-y-2">
-      <Text className="text-lg font-bold">Quick Info</Text>
+      <Text className="text-lg font-bold text-black dark:text-secondary-default">
+        Quick Info
+      </Text>
       <QInfoModal
         isOpen={qInfoModalVisible}
         title={qInfoModalTitle}
@@ -66,17 +71,25 @@ export default function QuickInfoSection({ crop }: any) {
             style={{
               elevation: 5,
             }}
-            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
+            className="flex-1 p-2 items-center justify-between bg-secondary-default dark:bg-accent-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
-              <EvilIcons name="exclamation" size={20} color="black" />
+              <EvilIcons
+                name="exclamation"
+                size={20}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </View>
-            <Text className="text-xs">Spacing</Text>
+            <Text className="text-xs text-black dark:text-secondary-default">
+              Spacing
+            </Text>
             <Image
               source={require('@/assets/images/spacing.png')}
               className="w-10 h-10 my-1"
             />
-            <Text>{crop?.spacing}</Text>
+            <Text className="text-black dark:text-secondary-default">
+              {crop?.spacing}
+            </Text>
           </Pressable>
           {/* Planting Depth */}
           <Pressable
@@ -89,17 +102,25 @@ export default function QuickInfoSection({ crop }: any) {
             style={{
               elevation: 5,
             }}
-            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
+            className="flex-1 p-2 items-center justify-between bg-secondary-default dark:bg-accent-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
-              <EvilIcons name="exclamation" size={20} color="black" />
+              <EvilIcons
+                name="exclamation"
+                size={20}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </View>
-            <Text className="text-xs">Depth</Text>
+            <Text className="text-xs text-black dark:text-secondary-default">
+              Depth
+            </Text>
             <Image
               source={require('@/assets/images/depth.png')}
               className="w-10 h-10 my-1"
             />
-            <Text>{crop?.depth}</Text>
+            <Text className="text-black dark:text-secondary-default">
+              {crop?.depth}
+            </Text>
           </Pressable>
           {/* Watering Requirements */}
           <Pressable
@@ -112,17 +133,25 @@ export default function QuickInfoSection({ crop }: any) {
             style={{
               elevation: 5,
             }}
-            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
+            className="flex-1 p-2 items-center justify-between bg-secondary-default dark:bg-accent-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
-              <EvilIcons name="exclamation" size={20} color="black" />
+              <EvilIcons
+                name="exclamation"
+                size={20}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </View>
-            <Text className="text-xs">Water</Text>
+            <Text className="text-xs text-black dark:text-secondary-default">
+              Water
+            </Text>
             <Image
               source={require('@/assets/images/water.png')}
               className="w-10 h-10 my-1"
             />
-            <Text>{crop?.water} in/week</Text>
+            <Text className="text-black dark:text-secondary-default">
+              {crop?.water} in/week
+            </Text>
           </Pressable>
         </View>
         <View className="flex-row gap-x-2">
@@ -141,14 +170,22 @@ export default function QuickInfoSection({ crop }: any) {
             style={{
               elevation: 5,
             }}
-            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
+            className="flex-1 p-2 items-center justify-between bg-secondary-default dark:bg-accent-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
-              <EvilIcons name="exclamation" size={20} color="black" />
+              <EvilIcons
+                name="exclamation"
+                size={20}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </View>
-            <Text className="text-xs">Season</Text>
+            <Text className="text-xs text-black dark:text-secondary-default">
+              Season
+            </Text>
             <Image source={seasonIcon} className="w-10 h-10 my-1" />
-            <Text>{crop?.season}</Text>
+            <Text className="text-black dark:text-secondary-default">
+              {crop?.season}
+            </Text>
           </Pressable>
           {/* Germination Process */}
           <Pressable
@@ -161,17 +198,25 @@ export default function QuickInfoSection({ crop }: any) {
             style={{
               elevation: 5,
             }}
-            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
+            className="flex-1 p-2 items-center justify-between bg-secondary-default dark:bg-accent-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
-              <EvilIcons name="exclamation" size={20} color="black" />
+              <EvilIcons
+                name="exclamation"
+                size={20}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </View>
-            <Text className="text-xs">Germination</Text>
+            <Text className="text-xs text-black dark:text-secondary-default">
+              Germination
+            </Text>
             <Image
               source={require('@/assets/images/germination.png')}
               className="w-10 h-10 my-1"
             />
-            <Text>{crop?.germination}</Text>
+            <Text className="text-black dark:text-secondary-default">
+              {crop?.germination}
+            </Text>
           </Pressable>
           {/* Sprout to Harvest */}
           <Pressable
@@ -186,17 +231,25 @@ export default function QuickInfoSection({ crop }: any) {
             style={{
               elevation: 5,
             }}
-            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
+            className="flex-1 p-2 items-center justify-between bg-secondary-default dark:bg-accent-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
-              <EvilIcons name="exclamation" size={20} color="black" />
+              <EvilIcons
+                name="exclamation"
+                size={20}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </View>
-            <Text className="text-xs">Sprout to Harvest</Text>
+            <Text className="text-xs text-black dark:text-secondary-default">
+              Sprout to Harvest
+            </Text>
             <Image
               source={require('@/assets/images/calendar.png')}
               className="w-10 h-10 my-1"
             />
-            <Text>{crop?.sproutToHarvest}</Text>
+            <Text className="text-black dark:text-secondary-default">
+              {crop?.sproutToHarvest}
+            </Text>
           </Pressable>
         </View>
       </View>

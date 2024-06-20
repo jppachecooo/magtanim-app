@@ -17,8 +17,11 @@ import EmptyState from '@/components/EmptyState';
 import { AppContext } from '@/context/AppContext';
 
 import { Feather, AntDesign } from '@expo/vector-icons';
+import { useColorScheme } from 'nativewind';
 
 export default function Crops() {
+  const { colorScheme } = useColorScheme();
+
   const { selectedSeason, setSelectedSeason } = useContext(AppContext);
   const [activeCategory, setActiveCategory] = useState<string>('Vegetables');
   const [searchInput, setSearchInput] = useState<string>('');
@@ -33,7 +36,7 @@ export default function Crops() {
   });
 
   return (
-    <SafeAreaView className="flex-1 bg-secondary-100">
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
       <View className="space-y-4">
         <View className="p-2 bg-primary-200 rounded-full relative">
           <View className="absolute top-5 left-5 z-10">
@@ -51,7 +54,11 @@ export default function Crops() {
               searchInput.length === 0 ? 'hidden' : 'block'
             }`}
           >
-            <AntDesign name="close" size={20} color="black" />
+            <AntDesign
+              name="close"
+              size={20}
+              color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+            />
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -61,14 +68,15 @@ export default function Crops() {
                 key={category.name}
                 onPress={() => setActiveCategory(category.name)}
                 className={`${
-                  category.name === activeCategory && 'bg-secondary-default'
-                } py-2 px-4 border border-gray-200 rounded-full relative`}
+                  category.name === activeCategory &&
+                  'bg-secondary-default dark:bg-accent-default'
+                } py-2 px-4 border border-gray-200 dark:border-accent-default rounded-full relative`}
               >
                 <Text
                   key={category.name}
                   className={`${
                     category.name === activeCategory
-                      ? 'text-black font-semibold'
+                      ? 'text-black dark:text-secondary-default font-semibold'
                       : 'text-secondary-200'
                   }`}
                 >
@@ -83,7 +91,9 @@ export default function Crops() {
             <View className="self-start flex-row items-center gap-x-1">
               <Text className="text-secondary-200">Selected season:</Text>
               <TouchableOpacity onPress={() => setSelectedSeason('')}>
-                <Text className="font-semibold">{selectedSeason}</Text>
+                <Text className="font-semibold text-black dark:text-secondary-default">
+                  {selectedSeason}
+                </Text>
               </TouchableOpacity>
             </View>
           )}
@@ -96,10 +106,12 @@ export default function Crops() {
                 style={{
                   elevation: 5,
                 }}
-                className="m-2 w-32 h-32 p-2 bg-secondary-default rounded-3xl items-center justify-between"
+                className="m-2 w-32 h-32 p-2 bg-secondary-default dark:bg-accent-default rounded-3xl items-center justify-between"
               >
                 <Image source={item.icon} className="h-24 w-24" />
-                <Text className="text-xs">{item.name}</Text>
+                <Text className="text-xs text-black dark:text-secondary-default">
+                  {item.name}
+                </Text>
               </TouchableOpacity>
             )}
             keyExtractor={(item) => item.id}
