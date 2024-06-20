@@ -14,7 +14,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({ description }) => {
         width={50}
         className="h-52 w-full rounded-xl overflow-hidden"
       />
-      <Text className="font-semibold">{description}</Text>
+      <Text className="font-medium">{description}</Text>
     </View>
   );
 };

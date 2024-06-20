@@ -63,7 +63,10 @@ export default function QuickInfoSection({ crop }: any) {
                 `${crop?.name} should be spaced ${cropSpacing} apart to ensure they have enough space to grow and access sufficient nutrients and sunlight.`
               )
             }
-            className="flex-1 p-2 items-center justify-between bg-primary-100 rounded-md relative"
+            style={{
+              elevation: 5,
+            }}
+            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
               <EvilIcons name="exclamation" size={20} color="black" />
@@ -83,7 +86,10 @@ export default function QuickInfoSection({ crop }: any) {
                 `${crop?.name} should be planted at a depth of ${cropDepth} in the soil. This helps them access the moisture they need to germinate while being close enough to the surface for warmth.`
               )
             }
-            className="flex-1 p-2 items-center justify-between bg-primary-100 rounded-md relative"
+            style={{
+              elevation: 5,
+            }}
+            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
               <EvilIcons name="exclamation" size={20} color="black" />
@@ -103,7 +109,10 @@ export default function QuickInfoSection({ crop }: any) {
                 `${crop?.name} require consistent moisture, typically around ${crop?.water} of water per week. This can be through rainfall or manual watering.`
               )
             }
-            className="flex-1 p-2 items-center justify-between bg-primary-100 rounded-md relative"
+            style={{
+              elevation: 5,
+            }}
+            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
               <EvilIcons name="exclamation" size={20} color="black" />
@@ -129,7 +138,10 @@ export default function QuickInfoSection({ crop }: any) {
                 }`
               )
             }
-            className="flex-1 p-2 items-center justify-between bg-primary-100 rounded-md relative"
+            style={{
+              elevation: 5,
+            }}
+            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
               <EvilIcons name="exclamation" size={20} color="black" />
@@ -146,7 +158,10 @@ export default function QuickInfoSection({ crop }: any) {
                 `${crop?.name} seeds usually germinate within ${crop?.germination} when kept in the right conditions.`
               )
             }
-            className="flex-1 p-2 items-center justify-between bg-primary-100 rounded-md relative"
+            style={{
+              elevation: 5,
+            }}
+            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
               <EvilIcons name="exclamation" size={20} color="black" />
@@ -168,7 +183,10 @@ export default function QuickInfoSection({ crop }: any) {
                 }, after the ${crop?.germination} germination process.`
               )
             }
-            className="flex-1 p-2 items-center justify-between bg-primary-100 rounded-md relative"
+            style={{
+              elevation: 5,
+            }}
+            className="flex-1 p-2 items-center justify-between bg-secondary-default rounded-md relative"
           >
             <View className="absolute top-1 right-1">
               <EvilIcons name="exclamation" size={20} color="black" />

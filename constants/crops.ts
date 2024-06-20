@@ -392,7 +392,7 @@ const crops = [
   {
     id: '21',
     name: 'Papaya',
-    icon: require('@/assets/images/crops/tomato.png'),
+    icon: require('@/assets/images/crops/papaya.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -617,7 +617,7 @@ const crops = [
   {
     id: '36',
     name: 'Velvet Apple',
-    icon: require('@/assets/images/crops/tomato.png'),
+    icon: require('@/assets/images/crops/velvet-apple.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -632,7 +632,7 @@ const crops = [
   {
     id: '37',
     name: 'Cucumber Tree',
-    icon: require('@/assets/images/crops/tomato.png'),
+    icon: require('@/assets/images/crops/cucumber-tree.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -647,7 +647,7 @@ const crops = [
   {
     id: '38',
     name: 'Spanish Plum',
-    icon: require('@/assets/images/crops/tomato.png'),
+    icon: require('@/assets/images/crops/spanish-plum.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -947,7 +947,7 @@ const crops = [
   {
     id: '58',
     name: 'Radish',
-    icon: require('@/assets/images/crops/tomato.png'),
+    icon: require('@/assets/images/crops/radish.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -961,8 +961,8 @@ const crops = [
   },
   {
     id: '59',
-    name: 'Singkamas',
-    icon: require('@/assets/images/crops/tomato.png'),
+    name: 'Turnip',
+    icon: require('@/assets/images/crops/turnip.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -977,7 +977,7 @@ const crops = [
   {
     id: '60',
     name: 'Ginger',
-    icon: require('@/assets/images/crops/tomato.png'),
+    icon: require('@/assets/images/crops/ginger.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',

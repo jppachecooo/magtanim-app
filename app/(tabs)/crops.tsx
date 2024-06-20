@@ -61,10 +61,8 @@ export default function Crops() {
                 key={category.name}
                 onPress={() => setActiveCategory(category.name)}
                 className={`${
-                  category.name === activeCategory
-                    ? 'bg-secondary-default'
-                    : 'border border-secondary-200'
-                } py-2 px-4 rounded-full relative`}
+                  category.name === activeCategory && 'bg-secondary-default'
+                } py-2 px-4 border border-gray-200 rounded-full relative`}
               >
                 <Text
                   key={category.name}
@@ -80,7 +78,7 @@ export default function Crops() {
             ))}
           </View>
         </ScrollView>
-        <View className="items-center h-screen">
+        <View className="items-center h-screen pb-52">
           {selectedSeason.length !== 0 && (
             <View className="self-start flex-row items-center gap-x-1">
               <Text className="text-secondary-200">Selected season:</Text>
