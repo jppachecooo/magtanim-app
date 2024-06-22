@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { useLocalSearchParams, useNavigation } from 'expo-router';
-
-import { Ionicons, Fontisto } from '@expo/vector-icons';
 
 import crops from '@/constants/crops';
 import IDSection from '@/components/sections/IDSection';
 import QuickInfoSection from '@/components/sections/QuickInfoSection';
 import PDBCSection from '@/components/sections/PDBCSection';
+import { AppContext } from '@/context/AppContext';
+
+import { Ionicons, Fontisto } from '@expo/vector-icons';
 
 export default function CropInformation() {
+  const { favorites, toggleFavorite } = useContext(AppContext);
+
   const navigation = useNavigation();
 
   const id = useLocalSearchParams().id;
   const crop = crops.find((crop) => crop.id === id);
+
+  const isFavorite = favorites.some((favorite: any) => favorite.id === id);
 
   return (
     <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
@@ -34,8 +39,12 @@ export default function CropInformation() {
               <Text className="text-secondary-100 -mt-1">{crop?.category}</Text>
             </View>
           </View>
-          <TouchableOpacity>
-            <Fontisto name="heart" size={24} color="#FFFF" />
+          <TouchableOpacity onPress={() => toggleFavorite(crop?.id)}>
+            <Fontisto
+              name="heart"
+              size={24}
+              color={`${isFavorite ? '#E74C3C' : 'white'}`}
+            />
           </TouchableOpacity>
         </View>
         <ScrollView showsVerticalScrollIndicator={false} className="space-y-4">

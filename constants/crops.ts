@@ -6,7 +6,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '18-24 in',
     depth: '¼ in',
     water: '1',
@@ -111,7 +110,6 @@ const crops = [
     description:
       'Bitter Gourd is a climbing vine, nearly or quite smooth, annual vine. Tendrils are simple, up to 20 centimeters long. Leaves are 2.5 to 10 centimeters in diameter, cut nearly to the base into 5 to 7 lobes, oblong-ovate, variously toothed, and heart shaped at the base.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '1.5-2.5 m',
     depth: '½ in',
     water: '1',
@@ -126,7 +124,6 @@ const crops = [
     description:
       'Pumpkin is a course, prostrate or climbing, annual, herbaceous vine, reaching a length of 4 meters or more. Leaves are hispid, rounded, 15 to 30 centimeters in diameter, heart-shaped at the base, shallowly 5-lobed, with finely toothed margins, and often mottled on the upper surface.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '36-60 in',
     depth: '1-2 in',
     water: '1',
@@ -141,7 +138,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '14-16 in',
     depth: '1 in',
     water: '2',
@@ -156,7 +152,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '6-18 in',
     depth: '¼-½ in',
     water: '2',
@@ -171,7 +166,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '12 in',
     depth: '1 in',
     water: '1',
@@ -186,7 +180,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '3 m',
     depth: '1 in',
     water: '1-2',
@@ -201,7 +194,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '1 m',
     depth: '2-3 cm',
     water: '1-2',
@@ -216,7 +208,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '12-18 in',
     depth: '¼-½ in',
     water: '1',
@@ -231,7 +222,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '12-18 in',
     depth: '½ in',
     water: '1-2',
@@ -246,7 +236,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '15-18 in',
     depth: '¼ in',
     water: '2',
@@ -261,7 +250,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '24-30 in',
     depth: '1-½ in',
     water: '1',
@@ -276,7 +264,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '2-4 in',
     depth: '1/2 in',
     water: '1',
@@ -291,7 +278,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '4 in',
     depth: '1 in',
     water: '2',
@@ -306,7 +292,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '6-8 in',
     depth: '12 in',
     water: '1',
@@ -321,7 +306,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '6-8 feet',
     depth: '3-5 in',
     water: '3-4',
@@ -336,7 +320,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '18-24 in',
     depth: '1-4 in',
     water: '1-2',
@@ -351,7 +334,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '20-30 cm',
     depth: '1 cm',
     water: '2',
@@ -366,7 +348,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '3 in',
     depth: '½ in',
     water: '1-2',
@@ -381,7 +362,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
-    isFavorite: false,
     spacing: '18 in',
     depth: '2-3 in',
     water: '3',
@@ -396,7 +376,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '1.5 m',
     depth: '1 m',
     water: '1',
@@ -411,7 +390,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '5 m',
     depth: '7 cm',
     water: '1',
@@ -426,7 +404,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '2 m',
     depth: '60-80 cm',
     water: '1',
@@ -441,7 +418,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '15 m',
     depth: '1/2 in',
     water: '1',
@@ -456,7 +432,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '6.5m',
     depth: '1 m',
     water: '1',
@@ -471,7 +446,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '80-100 cm',
     depth: '3-4 in',
     water: '2',
@@ -486,7 +460,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '8 m',
     depth: '12-18 in',
     water: '1',
@@ -501,7 +474,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '10 m',
     depth: '0.5 in',
     water: '1',
@@ -516,7 +488,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '7.5-8.5 m',
     depth: '60-90 cm',
     water: '1',
@@ -531,7 +502,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '1.2-2.5 m',
     depth: '8 mm',
     water: '1',
@@ -546,7 +516,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '4m-7m',
     depth: '½ in',
     water: '1',
@@ -561,7 +530,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '30-40 in',
     depth: '8 in',
     water: '1',
@@ -576,7 +544,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '3-4 in',
     depth: '2 cm',
     water: '1',
@@ -591,7 +558,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '5 m',
     depth: '3 cm',
     water: '1',
@@ -606,7 +572,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '7.6 m',
     depth: '7 in',
     water: '2-3',
@@ -621,7 +586,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '5-10 m',
     depth: '2-3 cm',
     water: '1-2',
@@ -636,7 +600,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '30cm-60cm',
     depth: '1 in',
     water: '1',
@@ -651,7 +614,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '15-20 in',
     depth: '2 in',
     water: '2',
@@ -666,7 +628,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '8-10 m',
     depth: '2-3 in',
     water: '1',
@@ -681,7 +642,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
-    isFavorite: false,
     spacing: '6-9 m',
     depth: '2 cm',
     water: '1',
@@ -696,7 +656,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '12-16 in',
     depth: '¼ in',
     water: '1',
@@ -711,7 +670,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '18-24 in',
     depth: '¼ in',
     water: '1',
@@ -726,7 +684,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '8-10 in',
     depth: '¼ in',
     water: '1',
@@ -741,7 +698,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '24 in',
     depth: '¼ in',
     water: '1',
@@ -756,7 +712,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '5-15 in',
     depth: '1-2 in',
     water: '1',
@@ -771,7 +726,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '6-8 in',
     depth: '8-12 cm',
     water: '1',
@@ -786,7 +740,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '8-10 in',
     depth: '½ in',
     water: '1',
@@ -801,7 +754,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '6-8 in',
     depth: '½ in',
     water: '2-3',
@@ -816,7 +768,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '2-3 in',
     depth: '½ in',
     water: '1',
@@ -831,7 +782,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
-    isFavorite: false,
     spacing: '24-36 in',
     depth: '½ in',
     water: '2',
@@ -846,7 +796,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '12-18 in',
     depth: '7 cm',
     water: '2',
@@ -861,7 +810,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '8-12 in',
     depth: '3-5 in',
     water: '1',
@@ -876,7 +824,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '1 m',
     depth: '6 in',
     water: '1',
@@ -891,7 +838,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '7 m',
     depth: '4 in',
     water: '1',
@@ -906,7 +852,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '2-3 in',
     depth: '¼-½ in',
     water: '2',
@@ -921,7 +866,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '6 in',
     depth: '1-2 in',
     water: '1',
@@ -936,7 +880,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '2-4 in',
     depth: '2 cm',
     water: '1',
@@ -951,7 +894,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '1-3 in',
     depth: '1 in',
     water: '1',
@@ -966,7 +908,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '8-12 in',
     depth: '1/4 in',
     water: '1',
@@ -981,7 +922,6 @@ const crops = [
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
-    isFavorite: false,
     spacing: '1 in',
     depth: '5-10 cm',
     water: '1',
