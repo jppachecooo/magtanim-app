@@ -11,7 +11,7 @@ export default function Favorites() {
 
   return (
     <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
-      <View className="space-y-4">
+      <View className="space-y-4 pb-28">
         <Header title="Favorites" />
         <View className="gap-y-4">
           <FlatList
@@ -25,6 +25,7 @@ export default function Favorites() {
                 icon={item?.icon}
               />
             )}
+            showsVerticalScrollIndicator={false}
           />
         </View>
       </View>

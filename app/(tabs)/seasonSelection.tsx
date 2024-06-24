@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
 import { AppContext } from '@/context/AppContext';
-import { router } from 'expo-router';
 
 export default function SeasonSelection() {
   const { setSelectedSeason } = useContext(AppContext);
@@ -14,7 +14,7 @@ export default function SeasonSelection() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200 items-center justify-center space-y-8">
+    <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
       <View>
         <Text className="text-lg text-center text-black dark:text-secondary-default">
           Filter the list of crops

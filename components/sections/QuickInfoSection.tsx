@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, Pressable, Image } from 'react-native';
+import { useColorScheme } from 'nativewind';
 
 import { AppContext } from '@/context/AppContext';
-import QInfoModal from '../modals/QInfoModal';
+import QInfoModal from '@/components/modals/QInfoModal';
 
 import { EvilIcons } from '@expo/vector-icons';
-import { useColorScheme } from 'nativewind';
 
 const getSeasonIcon = (season: string | undefined) => {
   switch (season) {
@@ -50,9 +50,7 @@ export default function QuickInfoSection({ crop }: any) {
 
   return (
     <View className="gap-y-2">
-      <Text className="text-lg font-bold text-black dark:text-secondary-default">
-        Quick Info
-      </Text>
+      <Text className="text-lg font-bold text-secondary-200">Quick Info</Text>
       <QInfoModal
         isOpen={qInfoModalVisible}
         title={qInfoModalTitle}

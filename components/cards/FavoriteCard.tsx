@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { View, Text, Image, Pressable, TouchableOpacity } from 'react-native';
+import { router } from 'expo-router';
 
 import { AppContext } from '@/context/AppContext';
 
 import { Fontisto } from '@expo/vector-icons';
-import { router } from 'expo-router';
 
 interface FavoriteCardProps {
   id: string;
@@ -29,14 +29,14 @@ const FavoriteCard: React.FC<FavoriteCardProps> = ({
       }}
       className="flex-row space-x-2 p-2 bg-secondary-100 dark:bg-accent-default rounded-xl mb-4 relative"
     >
-      <View className="border border-gray-200 dark:border-accent-200 rounded-xl">
+      <View className="border border-gray-200 dark:border-accent-100 rounded-xl">
         <Image source={icon} className="h-24 w-24" />
       </View>
       <View>
         <Text className="text-lg text-black dark:text-secondary-default">
           {name}
         </Text>
-        <Text className="dark:text-secondary-100">{category}</Text>
+        <Text className="text-secondary-200">{category}</Text>
       </View>
       <Pressable
         onPress={() => toggleFavorite(id)}

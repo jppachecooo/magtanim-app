@@ -17,11 +17,8 @@ import EmptyState from '@/components/EmptyState';
 import { AppContext } from '@/context/AppContext';
 
 import { Feather, AntDesign } from '@expo/vector-icons';
-import { useColorScheme } from 'nativewind';
 
 export default function Crops() {
-  const { colorScheme } = useColorScheme();
-
   const { selectedSeason, setSelectedSeason } = useContext(AppContext);
   const [activeCategory, setActiveCategory] = useState<string>('Vegetables');
   const [searchInput, setSearchInput] = useState<string>('');
@@ -54,11 +51,7 @@ export default function Crops() {
               searchInput.length === 0 ? 'hidden' : 'block'
             }`}
           >
-            <AntDesign
-              name="close"
-              size={20}
-              color={`${colorScheme === 'light' ? 'black' : 'white'}`}
-            />
+            <AntDesign name="close" size={20} color="black" />
           </TouchableOpacity>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -70,13 +63,13 @@ export default function Crops() {
                 className={`${
                   category.name === activeCategory &&
                   'bg-secondary-default dark:bg-accent-default'
-                } py-2 px-4 border border-gray-200 dark:border-accent-default rounded-full relative`}
+                } py-2 px-4 border border-gray-200 dark:border-accent-100 rounded-full relative`}
               >
                 <Text
                   key={category.name}
                   className={`${
                     category.name === activeCategory
-                      ? 'text-black dark:text-secondary-default font-semibold'
+                      ? 'font-semibold text-black dark:text-secondary-default'
                       : 'text-secondary-200'
                   }`}
                 >
@@ -91,7 +84,7 @@ export default function Crops() {
             <View className="self-start flex-row items-center gap-x-1">
               <Text className="text-secondary-200">Selected season:</Text>
               <TouchableOpacity onPress={() => setSelectedSeason('')}>
-                <Text className="font-semibold text-black dark:text-secondary-default">
+                <Text className="font-semibold text-black dark:text-secondary-100">
                   {selectedSeason}
                 </Text>
               </TouchableOpacity>

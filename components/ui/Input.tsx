@@ -20,7 +20,7 @@ const Input: React.FC<InputProps> = ({
       value={value}
       onChangeText={onChangeText}
       placeholder={placeholder}
-      className="py-2 px-10 bg-secondary-default dark:bg-accent-default dark:placeholder-white rounded-full"
+      className="py-2 px-10 bg-secondary-default rounded-full"
     />
   );
 };

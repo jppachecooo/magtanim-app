@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { View, Text, Modal, Pressable } from 'react-native';
+import { useColorScheme } from 'nativewind';
 
 import { AppContext } from '@/context/AppContext';
 
@@ -16,7 +17,9 @@ const QInfoModal: React.FC<QInfoModalProps> = ({
   title,
   description,
 }) => {
+  const { colorScheme } = useColorScheme();
   const { setQInfoModalVisible } = useContext(AppContext);
+
   return (
     <Modal
       visible={isOpen}
@@ -27,15 +30,23 @@ const QInfoModal: React.FC<QInfoModalProps> = ({
       <View className="flex-1 items-center justify-center">
         <View
           style={{ elevation: 5 }}
-          className="bg-white w-[90%] rounded-lg p-4 space-y-4"
+          className="w-[90%] bg-secondary-default dark:bg-accent-default rounded-lg p-4 space-y-4"
         >
           <View className="flex-row items-center justify-between">
-            <Text className="text-lg font-bold">{title}</Text>
+            <Text className="text-lg font-bold text-black dark:text-secondary-default">
+              {title}
+            </Text>
             <Pressable onPress={() => setQInfoModalVisible(false)}>
-              <AntDesign name="close" size={15} color="black" />
+              <AntDesign
+                name="close"
+                size={15}
+                color={`${colorScheme === 'light' ? 'black' : 'white'}`}
+              />
             </Pressable>
           </View>
-          <Text>{description}</Text>
+          <Text className="text-black dark:text-secondary-default">
+            {description}
+          </Text>
         </View>
       </View>
     </Modal>

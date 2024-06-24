@@ -16,7 +16,9 @@ export default function Settings() {
         <View>
           <Text className="text-gray-500">Theme</Text>
           <View className="flex-row items-center justify-between">
-            <Text className="dark:text-white">Dark mode</Text>
+            <Text className="text-black dark:text-secondary-default">
+              Dark mode
+            </Text>
             <Switch
               value={colorScheme === 'dark'}
               onChange={toggleColorScheme}

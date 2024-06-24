@@ -3,6 +3,7 @@ const crops = [
     id: '1',
     name: 'Tomato',
     icon: require('@/assets/images/crops/tomato.png'),
+    background: require('@/assets/images/crops/tomato-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -12,94 +13,269 @@ const crops = [
     season: 'Wet/Dry',
     germination: '6-8 days',
     sproutToHarvest: '60-85 days',
+    uses: [
+      'Tomato can be eaten raw or cooked and is used in many dishes.',
+      'The tomato may also be processed into juice, soup, ketchup, puree, paste or powder.',
+    ],
     pests: [
       {
         name: 'Aphids',
         image: require('@/assets/images/pests/aphid.jpg'),
         description:
-          'Aphids are small sap-sucking insects and members of the superfamily Aphidoidea. Common names include greenfly and blackfly, although individuals within a species can vary widely in color. The group includes the fluffy white woolly aphids.',
-      },
-      { name: 'Cutworms', image: require('@/assets/images/pests/cutworm.jpg') },
-      {
-        name: 'Corn earworm',
-        image: require('@/assets/images/pests/corn-earworm.jpg'),
+          'Small soft bodied insects on underside of leaves and/or stems of plant; usually green or yellow in color, but may be pink, brown, red or black depending on species and host plant; if aphid infestation is heavy it may cause leaves to yellow and/or be distorted, necrotic spots on leaves and/or stunted shoots; aphids secrete a sticky, sugary substance called honeydew which encourages the growth of sooty mold on the plants.',
       },
       {
-        name: 'Flea beetles',
+        name: 'Beet Armyworm',
+        image: require('@/assets/images/pests/beet-armyworm.jpg'),
+        description:
+          'Singular, or closely grouped circular to irregularly shaped holes in foliage; heavy feeding by young larvae leads to skeletonized leaves; shallow, dry wounds on fruit; egg clusters of 50-150 eggs may be present on the leaves; egg clusters are covered in a whitish scale which gives the cluster a cottony or fuzzy appearance; young larvae are pale green to yellow in color while older larvae are generally darker green with a dark and light line running along the side of their body and a pink or yellow underside.',
+      },
+      {
+        name: 'Colorado Potato Beetle',
+        image: require('@/assets/images/pests/colorado-potato-beetle.jpg'),
+        description:
+          'Feeding damage to foliage; if infestation is severe or if left untreated plants can be completely defoliated; adult insect is a black and yellow striped beetle; larvae are bright red with black heads when they first hatch and change color to pink; larvae have two rows of black spots.',
+      },
+      {
+        name: 'Cutworms',
+        image: require('@/assets/images/pests/cutworms.jpg'),
+        description:
+          'Stems of young transplants or seedlings may be severed at soil line; if infection occurs later, irregular holes are eaten into the surface of fruits; larvae causing the damage are usually active at night and hide during the day in the soil at the base of the plants or in plant debris of toppled plant; larvae are 2.5–5.0 cm (1–2 in) in length; larvae may exhibit a variety of patterns and coloration but are usually dirty gray or brown to black with dark spots or lines and will curl up into a characteristic C-shape when disturbed.',
+      },
+      {
+        name: 'Flea Beetles',
         image: require('@/assets/images/pests/flea-beetles.jpg'),
-      },
-      {
-        name: 'Brown Marmorated Stink Bug',
-        image: require('@/assets/images/pests/brown-marmorated-stink-bug.jpg'),
-      },
-      { name: 'Slug', image: require('@/assets/images/pests/slug.png') },
-      {
-        name: 'Tarnished plant bug',
-        image: require('@/assets/images/pests/tarnished-plant-bug.jpg'),
-      },
-      {
-        name: 'Nematode',
-        image: require('@/assets/images/pests/nematode.jpg'),
-      },
-      {
-        name: 'Agromyzidae',
-        image: require('@/assets/images/pests/agromyzidae.jpg'),
-      },
-      {
-        name: 'Five-spotted hawk moth',
-        image: require('@/assets/images/pests/five-spotted-hawk-moth.jpg'),
-      },
-      {
-        name: 'Thrips',
-        image: require('@/assets/images/pests/thrips.jpeg'),
-      },
-      {
-        name: 'Tomato leafminer',
-        image: require('@/assets/images/pests/tomato-leafminer.jpg'),
-      },
-      {
-        name: 'Spider Mites',
-        image: require('@/assets/images/pests/spider-mites.jpg'),
+        description:
+          'Small holes or pits in leaves that give the foliage a characteristic “shothole” appearance; young plants and seedlings are particularly susceptible; plant growth may be reduced; if damage is severe the plant may be killed; feeding damage may also occur on the fruit; the pest responsible for the damage is a small (1.5–3.0 mm) dark colored beetle which jumps when disturbed; the beetles are often shiny in appearance.',
       },
       {
         name: 'Hornworms',
         image: require('@/assets/images/pests/hornworms.jpg'),
+        description:
+          'Feeding damage to leaves or leaves stripped from plant; heavy infestation may result in damage to fruit appearing as large open scars; large green caterpillars may be spotted on plant; caterpillars may reach in excess of 7.5 cm (3 in) in length and possess a spike at the end of their body; most common species have 7 diagonal stripes on sides or 8 v-shaped markings on each side; single eggs may be present on leaves and measure approx 1.3 mm in diameter; eggs are in initially light green in color and turn white prior to hatching.',
       },
       {
-        name: 'Whiteflies',
-        image: require('@/assets/images/pests/whiteflies.jpg'),
+        name: 'Vegetable Leafminer',
+        image: require('@/assets/images/pests/vegetable-leafminer.jpg'),
+        description:
+          'Thin, white, winding trails on leaves; heavy mining can result in white blotches on leaves and leaves dropping from the plant prematurely; early infestation can cause fruit yield to be reduced; adult leafminer is a small black and yellow moth which lays its eggs in the leaf; larvae hatch and feed on leaf interior.',
       },
       {
-        name: 'Colorado potato beetle',
-        image: require('@/assets/images/pests/colorado-potato-beetle.jpg'),
+        name: 'Stinkbugs',
+        image: require('@/assets/images/pests/stinkbugs.jpg'),
+        description:
+          'Dark colored pinpricks on fruit surrounded by a lighter area that turns yellow or remains light green; stink bugs often carry pathogens in their mouthparts which can cause secondary infections and decay of fruit; adult insect is shield-shaped and brown or green in color; may have pink, red or yellow markings; eggs are drum shaped and laid in clusters on the leaves; larvae resemble the adults but are smaller.',
       },
       {
-        name: 'Caterpillars',
-        image: require('@/assets/images/pests/caterpillars.jpg'),
+        name: 'Thrips',
+        image: require('@/assets/images/pests/thrips.jpg'),
+        description:
+          'If population is high leaves and buds may be distorted; leaves appear silvery and are speckled with black feces; most damage occurs through the transmission of Tomato spotted wilt virus (TSWV); insect is small (1.5 mm) and slender and best viewed using a hand lens; adult thrips are pale yellow to light brown and the nymphs are smaller and lighter in color.',
+      },
+      {
+        name: 'Corn earworm',
+        image: require('@/assets/images/pests/corn-earworm.jpg'),
+        description:
+          'Holes in tomato fruit, including entry holes near stem end; feeding turns inside of tomato into a watery cavity filled with cast skins and frass (insect feces); damaged fruit ripens prematurely; young caterpillars are cream-white in color with a black head and black hairs; older larvae may be yellow-green to almost black in color with fine white lines along their body and black spots at the base of hairs; eggs are laid singly on both upper and lower leaf surfaces and are initially creamy white but develop a brown-red ring after 24 hours and darken prior to hatching.',
+      },
+      {
+        name: 'Spider Mites',
+        image: require('@/assets/images/pests/spider-mites.jpg'),
+        description:
+          'Leaves stippled with yellow; leaves may appear bronzed; webbing covering leaves; mites may be visible as tiny moving dots on the webs or underside of leaves, best viewed using a hand lens; usually not spotted until there are visible symptoms on the plant; leaves turn yellow and may drop from plant.',
       },
     ],
     diseases: [
       {
-        name: 'Alternaria solani',
-        image: require('@/assets/images/diseases/alternaria-solani.jpg'),
+        name: 'Anthracnose',
+        image: require('@/assets/images/diseases/anthracnose.jpg'),
         description:
-          'Alternaria solani is a fungal pathogen that produces a disease in tomato and potato plants called early blight.',
+          'Fruit symptoms are the most common although stem, leaves and roots can also be infected; disease causes characteristic sunken circular lesions on the fruit; the indentations on may have visible concentric brown and yellow rings; lesion centers turn tan in color as they mature and become dotted with small black fungal fruiting bodies (microsclerotia); lesions can grow very large.',
       },
       {
-        name: 'Calcium deficiency',
-        image: require('@/assets/images/diseases/calcium-deficiency.jpg'),
+        name: 'Black Mold',
+        image: require('@/assets/images/diseases/black-mold.jpg'),
+        description:
+          'Disease causes the appearance of black or brown lesions on the surface of ripe fruit; lesions may be tiny flecks or may be large patches of decaying tissue; during periods of humid weather, the lesions may become covered in black, velvety spore masses.',
       },
       {
-        name: 'Bacterial spot',
+        name: 'Alternaria',
+        image: require('@/assets/images/diseases/alternaria.jpg'),
+        description:
+          'Alternaria is a genus of Deuteromycetes fungi. All species are known as major plant pathogens. They are also common allergens in humans, growing indoors and causing hay fever or hypersensitivity reactions that sometimes lead to asthma.',
+      },
+      {
+        name: 'Early Blight',
+        image: require('@/assets/images/diseases/early-blight.jpg'),
+        description:
+          'Early blight symptoms start as oval shaped lesions with a yellow chlorotic region across the lesion; concentric leaf lesions may be seen on infected leaves; leaf tissue between veins is destroyed; severe infections can cause leaves to completely collapse; as the disease progresses leaves become severely blighted leading to reduced yield; tomato stems may become infected with the fungus leading to Alternaria stem canker; initial symptoms of of stem canker are the development of dark brown regions on the stem; stem cankers may enlarge to girdle the whole stem resulting in the death of the whole plant; brown streaks can be found in the vascular tissue above and below the canker region; fruit symptoms include small black v-shaped lesions at the shoulders of the fruit (the disease is also known black shoulder); lesions may also appear on the fruit as dark flecks with concentric ring pattern; fruit lesions can seen in the field or may develop during fruit transit to the market; the lesions may have a velvety appearance caused by sporulation of the fungus',
+      },
+      {
+        name: 'Fusarium Wilt',
+        image: require('@/assets/images/beneficial-critters/ground-beetle.jpg'),
+        description:
+          'Symptoms of Fusarium wilt may first appear as yellowing and wilting of leaves on one side of the leaf midrib or plant; one-sided symptoms are caused by a blockage in the vascular system supplying the symptomatic side of the plant; as the disease progresses, older leaves become necrotic and the plant begins to wilt; fruit on infected plants is smaller and yield is reduced; damage to leaves makes fruit susceptible to sunscald; stem symptoms may be mistaken for bacterial wilt but a bacterial ooze test will be negative; stem tissue becomes discolored brown.',
+      },
+      {
+        name: 'Phytophthora Infestans',
+        image: require('@/assets/images/diseases/phytophthora-infestans.jpg'),
+        description:
+          'Phytophthora infestans is an oomycete or water mold, a fungus-like microorganism that causes the serious potato and tomato disease known as late blight or potato blight. Early blight, caused by Early Blight, is also often called "potato blight".',
+      },
+      {
+        name: 'Gray mold',
+        image: require('@/assets/images/diseases/gray-mold.jpg'),
+        description:
+          'Disease appears on tomato seedlings at or just below the soil line as a fuzzy gray-brown lesion which often girdles the stem, if stem is girdled all parts of the plant above the lesion begin to wilt; infected flowers and calyxes become covered in gray spores; unripe fruit turns light brown or gray in color and rots; green fruit infected by airborne spores develop circular white rings called “ghost spots”.',
+      },
+      {
+        name: 'Leaf Mold',
+        image: require('@/assets/images/diseases/leaf-mold.jpg'),
+        description:
+          'The older leaves exhibit pale greenish to yellow spots (without distinguishable margins) on upper surface. Whereas the lower portion of this spots exhibit green to brown velvety fungal growth. As the disease progress the spots may coalesce and appear brown. The infected leaves become wither and die but stay attached to the plant. The fungus also infects flowers and fruits. The affected flowers become black and drop off. The affected fruit intially shows smooth black irregular area on the stem end but later it becomes sunken, leathery and dry.',
+      },
+      {
+        name: 'Septoria Leaf Spot',
+        image: require('@/assets/images/diseases/septoria-leaf-spot.jpg'),
+        description:
+          'Symptoms may occur at any stage of tomato development and begin as small, water-soaked spots or circular grayish-white spots on the underside of older leaves; spots have a grayish center and a dark margin and they may colasece; fungal fruiting bodies are visible as tiny black specks in the center of spot; spots may also appear on stems, fruit calyxes, and flowers.',
+      },
+      {
+        name: 'Target Spot',
+        image: require('@/assets/images/diseases/target-spot.jpg'),
+        description:
+          'The fungus infects all parts of plant. Infected leaves shows small, pinpoint, water soaked spots initially. As the disease progress the spots enlarge to become necrotic lesions with conspicuous concentric circles, dark margins and light brown centers. Whereas the fruits exhibit brown, slightly sunken flecks in the beginning but later the lesions become large pitted appearance.',
+      },
+      {
+        name: 'Verticillium Wilt',
+        image: require('@/assets/images/diseases/verticillium-wilt.jpg'),
+        description:
+          'Symptoms appear first on lower leaves and spread upwards; initial symptoms of the disease may be visible as yellow blotches on the lower leaves of the plant; a rapid yellowing of leaves follows as the disease progresses; leaf veins turn brown and brown dead spots appear on the leaves; leaves may wilt then die and drop from the plant; the disease progresses upwards through the stem causing the plant to be stunted; leaves at the top of the plant remain green; fruits develop yellow shoulders and yield is reduced; loss of leaves results in fruit being susceptible to sun scald.',
+      },
+      {
+        name: 'Bacterial Canker',
+        image: require('@/assets/images/diseases/bacterial-canker.jpg'),
+        description:
+          'Bacterial canker can affect tomato plants of any age, seedlings may be killed quickly once they become infected; initial symptoms of bacterial canker is the unilateral wilting of plants and formation of light colored streaks up and down the outside of the leaf midrib, petiole and stem; streaks on stems may break open to form cankers; mature leaves develop small necrotic spots on the upper leaf surfaces or small raised white spots on the leaves; white spots develop on fruit, usually while they are still green; spots on fruit develop a raised dark center and are known as "birds eye spots"',
+      },
+      {
+        name: 'Bacterial Speck',
+        image: require('@/assets/images/diseases/bacterial-speck.jpg'),
+        description:
+          'Dark specks appear on the leaves, often associated with a yellow halo; foliar symptoms of bacterial speck are very difficult to distinguish from bacterial spot but can be differentiated by symptoms on the fruit; lesions on fruit are much smaller than those caused by bacterial spot; lesions on fruit are raised and scaly.',
+      },
+      {
+        name: 'Bacterial Spot',
         image: require('@/assets/images/diseases/bacterial-spot.jpg'),
+        description:
+          'Bacterial spot lesions starts out as small water-soaked spots; lesions become more numerous and coalesce to form necrotic areas on the leaves giving them a blighted appearance; of leaves drop from the plant severe defoliation can occur leaving the fruit susceptible to sunscald; mature spots have a greasy appearance and may appear transparent when held up to light; centers of lesions dry up and fall out of the leaf; blighted leaves often remain attached to the plant and give it a blighted appearance; fruit infections start as a slightly raised blister; lesions may have a faint halo which eventually disappears; lesions on fruit may have a raised margin and sunken center which gives the fruit a scabby appearance.',
       },
       {
-        name: 'Botrytis cinerea',
-        image: require('@/assets/images/diseases/botrytis-cinerea.jpg'),
+        name: 'Bacterial Wilt',
+        image: require('@/assets/images/diseases/bacterial-wilt.jpg'),
+        description:
+          'Initial symptoms of the disease is the wilting of a few of the youngest leaves; the disease progresses rapidly in hot weather and the entire plant wilts suddenly and dies; in cooler conditions, wilting is less rapid and plant may produce roots on the stems; vascular tissue shows a brown discoloration and decaying roots; stems cut under water will ooze bacterial exudate and will confirm the symptoms are not caused by Fusarium wilt.',
       },
       {
-        name: 'Catfacing',
-        image: require('@/assets/images/diseases/catfacing.jpg'),
+        name: 'Blossom-end Rot',
+        image: require('@/assets/images/diseases/blossom-end-rot.jpg'),
+        description:
+          'Blossom end-rot is caused by a low concentration of calcium in the tomato fruit; symptoms initially appear as light tan, water-soaked areas which can then enlarge and turn black and leathery in appearance; symptoms are most often seen at the blossom end of the fruit, but may also occur on the side of the fruit; blossom-end rot may also occur internally with no visible symptoms on outside of fruit.',
+      },
+      {
+        name: 'Catface',
+        image: require('@/assets/images/diseases/catface.jpg'),
+        description:
+          'Catface usually occurs on the blossom end, tomato fruits are usually misshapen with large holes or corky brown scars close to the blossom end of the fruit; fruits are often flattened and may be kidney shaped; holes on the fruit extend deep inside the fruit.',
+      },
+      {
+        name: 'Edema',
+        image: require('@/assets/images/diseases/edema.jpg'),
+        description:
+          'Swellings and/or blisters or calluses on leaves caused by rupturing epidermal and inner leaf cells ; deformed foliage which curls; leaf tissue may also tear as the leaf matures; symptoms are often mistaken for disease or insect damage.',
+      },
+      {
+        name: 'Sunscald',
+        image: require('@/assets/images/diseases/sunscald.jpg'),
+        description:
+          'Symptoms of sunscald are most common on green fruit; white or yellow necrotic patches develop on the sides of the fruit that are facing the sun; blisters may be white with a yellow halo; damaged areas may become flattened in appearance and papery in texture; damaged areas are often invaded by secondary pathogens and turn black.',
+      },
+    ],
+    beneficialCritters: [
+      {
+        name: 'Ground beetle',
+        image: require('@/assets/images/beneficial-critters/ground-beetle.jpg'),
+        description: '',
+      },
+      {
+        name: 'Lacewings',
+        image: require('@/assets/images/beneficial-critters/lacewings.jpg'),
+        description: '',
+      },
+      {
+        name: 'Bee',
+        image: require('@/assets/images/beneficial-critters/bee.jpg'),
+        description: '',
+      },
+      {
+        name: 'Wasp',
+        image: require('@/assets/images/beneficial-critters/wasp.jpg'),
+        description: '',
+      },
+      {
+        name: 'Earthworm',
+        image: require('@/assets/images/beneficial-critters/earthworm.jpg'),
+        description: '',
+      },
+      {
+        name: 'Spiders',
+        image: require('@/assets/images/beneficial-critters/spider.jpg'),
+        description: '',
+      },
+      {
+        name: 'Grasshopper',
+        image: require('@/assets/images/beneficial-critters/grasshopper.jpg'),
+        description: '',
+      },
+      {
+        name: 'Ladybug',
+        image: require('@/assets/images/beneficial-critters/ladybug.jpg'),
+        description: '',
+      },
+      {
+        name: 'Robber fly',
+        image: require('@/assets/images/beneficial-critters/robber-fly.jpeg'),
+        description: '',
+      },
+      {
+        name: 'Ant',
+        image: require('@/assets/images/beneficial-critters/ant.jpg'),
+        description: '',
+      },
+      {
+        name: 'Braconid wasp',
+        image: require('@/assets/images/beneficial-critters/braconid-wasp.jpg'),
+        description: '',
+      },
+      {
+        name: 'Mantids',
+        image: require('@/assets/images/beneficial-critters/mantid.jpg'),
+        description: '',
+      },
+      {
+        name: 'Pollinators',
+        image: require('@/assets/images/beneficial-critters/pollinator.jpg'),
+        description: '',
+      },
+      {
+        name: 'Syrphid fly',
+        image: require('@/assets/images/beneficial-critters/syrphid-fly.jpg'),
+        description: '',
+      },
+      {
+        name: 'Tachinid fly',
+        image: require('@/assets/images/beneficial-critters/tachinid-fly.jpg'),
+        description: '',
       },
     ],
   },
@@ -107,6 +283,7 @@ const crops = [
     id: '2',
     name: 'Bitter Gourd',
     icon: require('@/assets/images/crops/bitter-gourd.png'),
+    background: require('@/assets/images/crops/bitter-gourd-bg.jpg'),
     description:
       'Bitter Gourd is a climbing vine, nearly or quite smooth, annual vine. Tendrils are simple, up to 20 centimeters long. Leaves are 2.5 to 10 centimeters in diameter, cut nearly to the base into 5 to 7 lobes, oblong-ovate, variously toothed, and heart shaped at the base.',
     category: 'Vegetables',
@@ -116,11 +293,13 @@ const crops = [
     season: 'Wet/Dry',
     germination: '8-10 days',
     sproutToHarvest: '55-60 days',
+    uses: [''],
   },
   {
     id: '3',
     name: 'Pumpkin',
     icon: require('@/assets/images/crops/pumpkin.png'),
+    background: require('@/assets/images/crops/pumpkin-bg.jpg'),
     description:
       'Pumpkin is a course, prostrate or climbing, annual, herbaceous vine, reaching a length of 4 meters or more. Leaves are hispid, rounded, 15 to 30 centimeters in diameter, heart-shaped at the base, shallowly 5-lobed, with finely toothed margins, and often mottled on the upper surface.',
     category: 'Vegetables',
@@ -130,11 +309,18 @@ const crops = [
     season: 'Wet/Dry',
     germination: '10 days',
     sproutToHarvest: '90-120 days',
+    uses: [
+      'Pumpkin flesh, leaves, and flowers can be cooked and eaten in a variety of dishes. The seeds are also edible and are commonly roasted and eaten as a snack.',
+      'Ornamental gourds are cultivars of C. pepo with small, bitter, and inedible fruits in many shapes, sizes, and colors.',
+      'The pumpkin has been used as a medicine in Central and North America. It is a gentle and safe remedy for several complaints. The seeds are widely used as an anthelmintic. The complete seed, together with the husk, is used to remove tapeworms.',
+      'The fruit and seed decoctions have been reported to be used as diuretics and to reduce fevers, and are used for curing indigestion. The pulp is applied to burns and scalds, inflammation, abscesses, and boils. It is also used in the treatment of migraine and neuralgia.',
+    ],
   },
   {
     id: '4',
     name: 'Lady’s Finger',
     icon: require('@/assets/images/crops/ladys-finger.png'),
+    background: require('@/assets/images/crops/ladys-finger-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -144,11 +330,13 @@ const crops = [
     season: 'Dry',
     germination: '6-8 days',
     sproutToHarvest: '60-70 days',
+    uses: [''],
   },
   {
     id: '5',
     name: 'Lettuce',
     icon: require('@/assets/images/crops/lettuce.png'),
+    background: require('@/assets/images/crops/lettuce-bg.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -158,11 +346,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-10 days',
     sproutToHarvest: '30-70 days',
+    uses: [
+      'Lettuce is primarily eaten raw as a salad green. Some varieties can be cooked and eaten as a vegetable.',
+    ],
   },
   {
     id: '6',
     name: 'Cucumber',
     icon: require('@/assets/images/crops/cucumber.png'),
+    background: require('@/assets/images/crops/cucumber-bg.jpeg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -172,11 +364,16 @@ const crops = [
     season: 'Dry',
     germination: '3-10 days',
     sproutToHarvest: '50-70 days',
+    uses: [
+      'Cucumbers are used as a fresh vegetable, consumed fresh in salads. Some varieties are grown specifically for pickling. Yellow varieties are generally cooked before consumption.',
+    ],
   },
   {
     id: '7',
     name: 'Moringa',
     icon: require('@/assets/images/crops/moringa.png'),
+    background: require('@/assets/images/crops/moringa-bg.jpg'),
+
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -186,11 +383,14 @@ const crops = [
     season: 'Dry',
     germination: '7-30 days',
     sproutToHarvest: '42-56 days',
+    uses: [''],
   },
   {
     id: '8',
     name: 'String Bean',
     icon: require('@/assets/images/crops/string-bean.png'),
+    background: require('@/assets/images/crops/string-bean-bg.jpg'),
+
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -200,11 +400,13 @@ const crops = [
     season: 'Dry',
     germination: '4-10 days',
     sproutToHarvest: '50-55 days',
+    uses: [''],
   },
   {
     id: '9',
     name: 'Chinese Cabbage',
     icon: require('@/assets/images/crops/chinese-cabbage.png'),
+    background: require('@/assets/images/crops/chinese-cabbage-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -214,11 +416,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-14 days',
     sproutToHarvest: '40-100 days',
+    uses: [
+      'Napa cabbage and bok choy are usued in similar ways. The inner leaves of napa cabbage are eaten raw or cooked in stir fries and other dishes while the tougher outer leaves are often used in soups. Both the leaves and stems of bok choy are edible and can be eaten raw or can be cooked in stir fries and other dishes.',
+    ],
   },
   {
     id: '10',
     name: 'Mustard Green',
     icon: require('@/assets/images/crops/mustard-green.png'),
+    background: require('@/assets/images/crops/mustard-green-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -228,11 +434,13 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-10 days',
     sproutToHarvest: '42 days',
+    uses: [''],
   },
   {
     id: '11',
     name: 'Chilli',
     icon: require('@/assets/images/crops/chilli.png'),
+    background: require('@/assets/images/crops/chilli-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -242,11 +450,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '10-14 days',
     sproutToHarvest: '60-100 days',
+    uses: [
+      'Hot peppers can be eaten fresh or cooked as a vegetable, seasoning or garnish.',
+    ],
   },
   {
     id: '12',
     name: 'Long Squash',
     icon: require('@/assets/images/crops/long-squash.png'),
+    background: require('@/assets/images/crops/long-squash-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -256,11 +468,13 @@ const crops = [
     season: 'Dry',
     germination: '7-10 days',
     sproutToHarvest: '60-110 days',
+    uses: [''],
   },
   {
     id: '13',
     name: 'Lima Bean',
     icon: require('@/assets/images/crops/lima-bean.png'),
+    background: require('@/assets/images/crops/lima-bean-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -270,11 +484,13 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-18 days',
     sproutToHarvest: '60-90 days',
+    uses: [''],
   },
   {
     id: '14',
     name: 'Winged Bean',
     icon: require('@/assets/images/crops/winged-bean.png'),
+    background: require('@/assets/images/crops/winged-bean-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -284,11 +500,13 @@ const crops = [
     season: 'Dry',
     germination: '7-21 days',
     sproutToHarvest: '120-240 days',
+    uses: [''],
   },
   {
     id: '15',
     name: 'Silk Squash',
     icon: require('@/assets/images/crops/silk-squash.png'),
+    background: require('@/assets/images/crops/silk-squash-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -298,11 +516,13 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-10 days',
     sproutToHarvest: '60-70 days',
+    uses: [''],
   },
   {
     id: '16',
     name: 'Chayote',
     icon: require('@/assets/images/crops/chayote.png'),
+    background: require('@/assets/images/crops/chayote-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -312,11 +532,13 @@ const crops = [
     season: 'Wet/Dry',
     germination: '21-28 days',
     sproutToHarvest: '121-182 days',
+    uses: [''],
   },
   {
     id: '17',
     name: 'Eggplant',
     icon: require('@/assets/images/crops/eggplant.png'),
+    background: require('@/assets/images/crops/eggplant-bg.jpeg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -326,11 +548,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-14 days',
     sproutToHarvest: '70 days',
+    uses: [
+      'Eggplant is usually cooked before consumption and is eaten as a vegetable.',
+    ],
   },
   {
     id: '18',
     name: 'Water Spinach',
     icon: require('@/assets/images/crops/water-spinach.png'),
+    background: require('@/assets/images/crops/water-spinach-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -340,11 +566,13 @@ const crops = [
     season: 'Wet',
     germination: '7-14 days',
     sproutToHarvest: '50-60 days',
+    uses: [''],
   },
   {
     id: ' 19',
     name: 'Spinach',
     icon: require('@/assets/images/crops/spinach.png'),
+    background: require('@/assets/images/crops/spinach-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -354,11 +582,15 @@ const crops = [
     season: 'Wet',
     germination: '5 days',
     sproutToHarvest: '45-50 days',
+    uses: [
+      'Spinach is eaten cooked as a vegetable and contains both large amounts iron, calcium, and other essential vitamins and minerals.',
+    ],
   },
   {
     id: '20',
     name: 'Black Pepper',
     icon: require('@/assets/images/crops/black-pepper.png'),
+    background: require('@/assets/images/crops/black-pepper-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Vegetables',
@@ -368,11 +600,15 @@ const crops = [
     season: 'Wet',
     germination: '5-20 days',
     sproutToHarvest: '730-1095 days',
+    uses: [
+      'Pepper is one of the oldest classic spices and is used as an ingredient in many spice mixtures, such as curry. Black pepper, white pepper, and green pepper all derive from the piper nigrum plant. ',
+    ],
   },
   {
     id: '21',
     name: 'Papaya',
     icon: require('@/assets/images/crops/papaya.png'),
+    background: require('@/assets/images/crops/papaya-bg.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -382,11 +618,17 @@ const crops = [
     season: 'Dry',
     germination: '7-14 days',
     sproutToHarvest: '182-212 days',
+    uses: [
+      'The ripe fruits are high in vitamins C and A, which are frequently lacking in the diets of people living in the tropics. Immature fruits are stewed or boiled as a vegetable in some countries, such as the Philippines.',
+      'The unripe fruits of the C. papaya tree contain papain, a substance used commercially as a meat tenderizer. Crumpled leaves are used as a meat tenderizer in Southern Asia before wrapping meats.',
+      'Papain also has medicinal and industrial applications, such as tanning leather, preventing wool shrinkage, and keeping beer clear during the brewing process.',
+    ],
   },
   {
     id: '22',
-    name: 'Philippine Lime',
-    icon: require('@/assets/images/crops/philippine-lime.png'),
+    name: 'Lime',
+    icon: require('@/assets/images/crops/lime.png'),
+    background: require('@/assets/images/crops/lime-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -396,11 +638,15 @@ const crops = [
     season: 'Perennial',
     germination: '21-42 days',
     sproutToHarvest: '365-730 days',
+    uses: [
+      'Lime fruit is commonly used to make juices and cordials or for extraction of citric acid. It may be used as a flavoring in cooking. Lime oil can be extracted from the peel of the fruit.',
+    ],
   },
   {
     id: '23',
     name: 'Banana',
     icon: require('@/assets/images/crops/banana.png'),
+    background: require('@/assets/images/crops/banana-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -410,11 +656,17 @@ const crops = [
     season: 'Perennial',
     germination: '14 days',
     sproutToHarvest: '334-425 days',
+    uses: [
+      'Bananas are a good source of vitamins and minerals, including vitamin C, vitamin B6, and potassium, and are often used as a healthy snack or ingredient in smoothies and other foods.',
+      'The fruit is the most widely used part of the plant and can be eaten fresh or cooked or processed into starch, chips, puree, beer, vinegar or dehydrated to produce dried fruit.',
+      'The fruit may also be processed into flour which is used in baking, soups or beverages. The flowers of the plant may be used as a vegetable. Fresh leaves have a high protein content and can be fed to cattle. Other uses for leaves include polishing floors, lining pots or wrapping food. ',
+    ],
   },
   {
     id: '24',
     name: 'Mango',
     icon: require('@/assets/images/crops/mango.png'),
+    background: require('@/assets/images/crops/mango-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -424,11 +676,13 @@ const crops = [
     season: 'Perennial',
     germination: '7-21 days',
     sproutToHarvest: '1825-2920 days',
+    uses: [''],
   },
   {
     id: '25',
     name: 'Guava',
     icon: require('@/assets/images/crops/guava.png'),
+    background: require('@/assets/images/crops/guava-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -438,11 +692,15 @@ const crops = [
     season: 'Perennial',
     germination: '21 days',
     sproutToHarvest: '1095-2920 days',
+    uses: [
+      'Guava fruits may be eaten fresh or processed to produce paste, jellies or preserves. Dehydrated fruit is used to make guava powder.',
+    ],
   },
   {
     id: '26',
     name: 'Pineapple',
     icon: require('@/assets/images/crops/pineapple.png'),
+    background: require('@/assets/images/crops/pineapple-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -452,11 +710,15 @@ const crops = [
     season: 'Perennial',
     germination: '182-365 days',
     sproutToHarvest: '547-1095 days',
+    uses: [
+      'Pineapple fruit is commonly eaten fresh or it may be cooked in a variety of dishes. Pineapple may also be canned or used to produce juice.',
+    ],
   },
   {
     id: '27',
     name: 'Avocado',
     icon: require('@/assets/images/crops/avocado.png'),
+    background: require('@/assets/images/crops/avocado-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -466,11 +728,16 @@ const crops = [
     season: 'Perennial',
     germination: '42-56 days',
     sproutToHarvest: '730 days',
+    uses: [
+      'The avocado is usually consumed fresh as a fruit or as an ingredient in salads or savory dishes. It has a markedly higher fat content than other fruits and is a staple in diets that have limited access to foods with high contents of monounsaturated fats.',
+      'Avocados are a source of vitamins C, E, K, and B6, as well as magnesium and potassium.',
+    ],
   },
   {
     id: '28',
     name: 'Pomelo',
     icon: require('@/assets/images/crops/pomelo.png'),
+    background: require('@/assets/images/crops/pomelo-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -480,11 +747,13 @@ const crops = [
     season: 'Perennial',
     germination: '14-56 days',
     sproutToHarvest: '2920 days',
+    uses: [''],
   },
   {
     id: '29',
     name: 'Coconut',
     icon: require('@/assets/images/crops/coconut.png'),
+    background: require('@/assets/images/crops/coconut-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -494,11 +763,17 @@ const crops = [
     season: 'Perennial',
     germination: '121 days',
     sproutToHarvest: '1095-2920 days',
+    uses: [
+      'Coconuts are primarily cultivated for their oil. The oil is extracted from the endosperm and is used in cooking. Low grade oils are used in the production of soaps. The endosperm can be consumed fresh or dry and is commonly grated for use in baking.',
+      'Young coconuts, termed waternuts, are commonly sold in tropical resorts, where the liquid is drunk directly from the shell.',
+      'Coconuts may also be used to produce coconut milk by squeezing the liquid from the grated endosperm. Coconut milk is popularly used in many dishes from Southeast Asia.',
+    ],
   },
   {
     id: '30',
     name: 'Passion Fruit',
     icon: require('@/assets/images/crops/passion-fruit.png'),
+    background: require('@/assets/images/crops/passion-fruit-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -508,11 +783,13 @@ const crops = [
     season: 'Perennial',
     germination: '21-84 days',
     sproutToHarvest: '365-547 days',
+    uses: [''],
   },
   {
     id: '31',
     name: 'Soursop',
     icon: require('@/assets/images/crops/soursop.png'),
+    background: require('@/assets/images/crops/soursop-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -522,11 +799,13 @@ const crops = [
     season: 'Perennial',
     germination: '15-30 days',
     sproutToHarvest: '1095-1825 days',
+    uses: [''],
   },
   {
     id: '32',
     name: 'Cotton Fruit',
     icon: require('@/assets/images/crops/cotton-fruit.png'),
+    background: require('@/assets/images/crops/cotton-fruit-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -536,11 +815,13 @@ const crops = [
     season: 'Perennial',
     germination: '5-10 days',
     sproutToHarvest: '1825-2555 days',
+    uses: [''],
   },
   {
     id: '33',
-    name: 'Jave Plum',
-    icon: require('@/assets/images/crops/jave-plum.png'),
+    name: 'Java Plum',
+    icon: require('@/assets/images/crops/java-plum.png'),
+    background: require('@/assets/images/crops/java-plum-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -550,11 +831,13 @@ const crops = [
     season: 'Perennial',
     germination: '75-90 days',
     sproutToHarvest: '2920-3650 days',
+    uses: [''],
   },
   {
     id: '34',
     name: 'Custard Apple',
     icon: require('@/assets/images/crops/custard-apple.png'),
+    background: require('@/assets/images/crops/custard-apple-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -564,11 +847,13 @@ const crops = [
     season: 'Perennial',
     germination: '55-60 days',
     sproutToHarvest: '243-456 days',
+    uses: [''],
   },
   {
     id: '35',
     name: 'Star Apple',
     icon: require('@/assets/images/crops/star-apple.png'),
+    background: require('@/assets/images/crops/star-apple-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -578,11 +863,13 @@ const crops = [
     season: 'Perennial',
     germination: '14-21 days',
     sproutToHarvest: '1825-3650 days',
+    uses: [''],
   },
   {
     id: '36',
     name: 'Velvet Apple',
     icon: require('@/assets/images/crops/velvet-apple.png'),
+    background: require('@/assets/images/crops/velvet-apple-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -592,11 +879,13 @@ const crops = [
     season: 'Perennial',
     germination: '14-21 days',
     sproutToHarvest: '1095-1825 days',
+    uses: [''],
   },
   {
     id: '37',
     name: 'Cucumber Tree',
     icon: require('@/assets/images/crops/cucumber-tree.png'),
+    background: require('@/assets/images/crops/cucumber-tree-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -606,11 +895,13 @@ const crops = [
     season: 'Perennial',
     germination: '90 days',
     sproutToHarvest: '365-1825 days',
+    uses: [''],
   },
   {
     id: '38',
     name: 'Spanish Plum',
     icon: require('@/assets/images/crops/spanish-plum.png'),
+    background: require('@/assets/images/crops/spanish-plum-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -620,11 +911,13 @@ const crops = [
     season: 'Perennial',
     germination: '70-84 days',
     sproutToHarvest: '1460-1825 days',
+    uses: [''],
   },
   {
     id: '39',
     name: 'Taramind',
     icon: require('@/assets/images/crops/taramind.png'),
+    background: require('@/assets/images/crops/taramind-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -634,11 +927,13 @@ const crops = [
     season: 'Perennial',
     germination: '11 days',
     sproutToHarvest: '4745-5110 days',
+    uses: [''],
   },
   {
     id: '40',
     name: 'Sweet Taramind',
     icon: require('@/assets/images/crops/tomato.png'),
+    background: require('@/assets/images/crops/taramind-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Fruits',
@@ -648,11 +943,13 @@ const crops = [
     season: 'Perennial',
     germination: '14-21 days',
     sproutToHarvest: '1460-2190 days',
+    uses: [''],
   },
   {
     id: '41',
     name: 'Basil',
     icon: require('@/assets/images/crops/basil.png'),
+    background: require('@/assets/images/crops/basil-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -662,11 +959,16 @@ const crops = [
     season: 'Dry',
     germination: '7-10 days',
     sproutToHarvest: '60-70 days',
+    uses: [
+      'Basil is an annual herb of the mint family (Lamiaceae), grown for its aromatic leaves. Basil is likely native to India and is widely grown as a kitchen herb. The leaves are used fresh or dried to flavour meats, fish, salads, and sauces; basil tea is a stimulantBasil is commonly used as a fresh or dried herb in cooking and is popularly used in beverages in Southeast Asia.',
+      'Essential oil can be extracted from the leaves and used in cosmetics, dental products and perfume.',
+    ],
   },
   {
     id: '42',
     name: 'Mint',
     icon: require('@/assets/images/crops/mint.png'),
+    background: require('@/assets/images/crops/mint-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -676,11 +978,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '2-4 days',
     sproutToHarvest: '10-14 days',
+    uses: [
+      'Mint leaves are used fresh or dried to make teas, jams and desserts. Essentila oil can be extracted from the leaves and is used as a flavoring.',
+    ],
   },
   {
     id: '43',
     name: 'Oregano',
     icon: require('@/assets/images/crops/oregano.png'),
+    background: require('@/assets/images/crops/oregano-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -690,11 +996,15 @@ const crops = [
     season: 'Perennial',
     germination: '10-15 days',
     sproutToHarvest: '80-90 days',
+    uses: [
+      'The leaves of the oregano plant are used fresh or dried as a herb in cooking. They may also be dried and used to extract essential oil which is used in soaps or as flavorings in wines and liqueurs.',
+    ],
   },
   {
     id: '44',
     name: 'Lemongrass',
     icon: require('@/assets/images/crops/lemongrass.png'),
+    background: require('@/assets/images/crops/lemongrass-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -704,11 +1014,15 @@ const crops = [
     season: 'Perennial',
     germination: '7-14 days',
     sproutToHarvest: '5-21 days',
+    uses: [
+      'The stalks (leaf bases) of the plant are commonly used to flavor dishes in Southeast Asian cooking. The heart of young shoots may be cooked and consumed as a vegetable. The tougher leaves are used to flavor dishes but are typically removed before serving. Leaves may also be used to make lemon grass tea. The essential oil extracted from the leaves is commonly used in insect repellents, perfumes and soaps.',
+    ],
   },
   {
     id: '45',
     name: 'Screw Pine',
     icon: require('@/assets/images/crops/screw-pine.png'),
+    background: require('@/assets/images/crops/screw-pine-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -718,11 +1032,13 @@ const crops = [
     season: 'Perennial',
     germination: '60-90 days',
     sproutToHarvest: '121-182 days',
+    uses: [''],
   },
   {
     id: '46',
     name: 'Turmeric',
     icon: require('@/assets/images/crops/turmeric.png'),
+    background: require('@/assets/images/crops/turmeric-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -732,11 +1048,13 @@ const crops = [
     season: 'Wet/Dry',
     germination: '20 days',
     sproutToHarvest: '182-304 days',
+    uses: [''],
   },
   {
     id: '47',
     name: 'Coriander',
     icon: require('@/assets/images/crops/coriander.png'),
+    background: require('@/assets/images/crops/coriander-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -746,11 +1064,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '7-21 days',
     sproutToHarvest: '28 days',
+    uses: [
+      'All parts of the coriander plant are edible, but the fresh leaves and the dried seeds are most commonly used. Leaves and seeds are used fresh or dried as a herb in cooking.',
+    ],
   },
   {
     id: '48',
     name: 'Parsley',
     icon: require('@/assets/images/crops/parsley.png'),
+    background: require('@/assets/images/crops/parsley-bg.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -760,11 +1082,15 @@ const crops = [
     season: 'Dry',
     germination: '10-28 days',
     sproutToHarvest: '260-70 days',
+    uses: [
+      'Parsley leaves are used fresh or dried as a culinary herb. Fresh leaves are also commonly used as a garnish. The taproot of some cultivars is edible and may be eaten as a vegetable. Essential oil can be extracted from the parsley flowers and is used as a flavoring.',
+    ],
   },
   {
     id: '49',
     name: 'Rosemary',
     icon: require('@/assets/images/crops/rosemary.png'),
+    background: require('@/assets/images/crops/rosemary-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -774,11 +1100,15 @@ const crops = [
     season: 'Dry',
     germination: '7-14 days',
     sproutToHarvest: '14-28 days',
+    uses: [
+      'Rosemary leaves can be used fresh or dried as a herb in cooking or in salads. The leaves and flowers can be used to extract rosemary oil which is used as a seasoning or as a scent in soaps and household products.',
+    ],
   },
   {
     id: '50',
     name: 'Aloe Vera',
     icon: require('@/assets/images/crops/aloe-vera.png'),
+    background: require('@/assets/images/crops/aloe-vera-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Herbs',
@@ -788,11 +1118,16 @@ const crops = [
     season: 'Perennial',
     germination: '14-42 days',
     sproutToHarvest: '182-212 days',
+    uses: [
+      'Aloe vera plants are grown for medicinal value including improving digestion and boosting the immune system. They are also grown for extraction of the gel inside the leaves. The gel is used in desserts, yoghourts and beverages. The gel is also commonly used as a home remedy for treatment of burns and to prevent constipation. It is also used as a skin and hair nourisher.',
+      'The plant contains vitamins A (beta-carotene), C and E, which are antioxidants. It also contains vitamin B12 and folic acid.',
+    ],
   },
   {
     id: '51',
     name: 'Sweet Potato',
     icon: require('@/assets/images/crops/sweet-potato.png'),
+    background: require('@/assets/images/crops/sweet-potato-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -802,11 +1137,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '40-60 days',
     sproutToHarvest: '85-120 days',
+    uses: [
+      'Sweet potato tubers are consumed raw as a vegetable or processed into flour or starch. The leaves can be eaten raw or cooked.',
+    ],
   },
   {
     id: '52',
     name: 'Potato',
     icon: require('@/assets/images/crops/potato.png'),
+    background: require('@/assets/images/crops/potato-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -816,11 +1155,15 @@ const crops = [
     season: 'Wet/Dry',
     germination: '15-30 days',
     sproutToHarvest: '75-90 days',
+    uses: [
+      'Potato tubers are a staple food source in temperate regions and are eaten after cooking. They may be cut or sliced and made into potato chips or fries. Potatoes can also be processed into starch, alcohol or flour.',
+    ],
   },
   {
     id: '53',
     name: 'Taro',
     icon: require('@/assets/images/crops/taro.png'),
+    background: require('@/assets/images/crops/taro-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -830,11 +1173,13 @@ const crops = [
     season: 'Wet',
     germination: '7 days',
     sproutToHarvest: '212-365 days',
+    uses: [''],
   },
   {
     id: '54',
-    name: 'Purple yam',
+    name: 'Purple Yam',
     icon: require('@/assets/images/crops/purple-yam.png'),
+    background: require('@/assets/images/crops/purple-yam-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -844,11 +1189,13 @@ const crops = [
     season: 'Dry',
     germination: '84 days',
     sproutToHarvest: '180-240 days',
+    uses: [''],
   },
   {
     id: '55',
     name: 'Carrot',
     icon: require('@/assets/images/crops/carrot.png'),
+    background: require('@/assets/images/crops/carrot-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -858,11 +1205,15 @@ const crops = [
     season: 'Dry',
     germination: '14-21 days',
     sproutToHarvest: '14-21 days',
+    uses: [
+      'Carrot roots are eaten as a vegetable and can be consumed fresh or cooked. Carrot juice is consumed as a beverage. The leaves of the plant can be used as feed for animals.',
+    ],
   },
   {
     id: '56',
     name: 'Garlic',
     icon: require('@/assets/images/crops/garlic.png'),
+    background: require('@/assets/images/crops/garlic-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -872,11 +1223,15 @@ const crops = [
     season: 'Dry',
     germination: '7-14 days',
     sproutToHarvest: '273 days',
+    uses: [
+      'Garlic is primarily used for flavoring food and can be dried, ground or powdered for this purpose',
+    ],
   },
   {
     id: '57',
     name: 'Onion',
     icon: require('@/assets/images/crops/onion.png'),
+    background: require('@/assets/images/crops/onion-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -886,11 +1241,15 @@ const crops = [
     season: 'Dry',
     germination: '7-10 days',
     sproutToHarvest: '60-80 days',
+    uses: [
+      'The bulb is an edible vegetable and is the most commonly used part of the onion, usually consumed after cooking although it can be eaten fresh. The stems and leaves are also edible. In general, onions are used for salads (bunching onions or sliced full-grown bulbs), pickling (e.g. silver skin onions), cooking (such as in soups), and frying (for example, with meat).  It also plays an important role in traditional medicine (e.g. as a diuretic).',
+    ],
   },
   {
     id: '58',
     name: 'Radish',
     icon: require('@/assets/images/crops/radish.png'),
+    background: require('@/assets/images/crops/radish-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -900,11 +1259,15 @@ const crops = [
     season: 'Dry',
     germination: '3-5 days',
     sproutToHarvest: '21-35 days',
+    uses: [
+      'The radish root can be eaten fresh in salads or cooked with other ingredients such as meat. The leaves of the plant are also edible and can bu used as a salad green.',
+    ],
   },
   {
     id: '59',
     name: 'Turnip',
     icon: require('@/assets/images/crops/turnip.png'),
+    background: require('@/assets/images/crops/turnip-bg.png'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -914,11 +1277,15 @@ const crops = [
     season: 'Dry',
     germination: '7-21 days',
     sproutToHarvest: '152-273 days',
+    uses: [
+      'Turnips are eaten as a vegetable after cooking. The shoots and leaves can be eaten fresh in salads or the entire plant can be used as a forage for livestock.',
+    ],
   },
   {
     id: '60',
     name: 'Ginger',
     icon: require('@/assets/images/crops/ginger.png'),
+    background: require('@/assets/images/crops/ginger-bg.jpg'),
     description:
       'The tomato plant, with soft, hairy stems, can grow up to 9 feet tall, has 5-9 leaflets, 4-24 inches long leaves, and small yellow flowers with five pointed lobes on the corolla.',
     category: 'Root Crops',
@@ -928,6 +1295,9 @@ const crops = [
     season: 'Wet/Dry',
     germination: '42-56 days',
     sproutToHarvest: '304-365 days',
+    uses: [
+      'Ginger is popularly used as a spice in cooking and can be used either fresh, dried or powdered. The fresh rhizome can be used to extract ginger essential oil. Ginger may also be used to flavor beverages. Ginger continues to be a popular folk remedy in China and India.',
+    ],
   },
 ];
 

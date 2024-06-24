@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import { useLocalSearchParams, useNavigation } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 
 import crops from '@/constants/crops';
 import IDSection from '@/components/sections/IDSection';
 import QuickInfoSection from '@/components/sections/QuickInfoSection';
+import UsesSection from '@/components/sections/UsesSection';
 import PDBCSection from '@/components/sections/PDBCSection';
 import { AppContext } from '@/context/AppContext';
 
@@ -13,8 +14,6 @@ import { Ionicons, Fontisto } from '@expo/vector-icons';
 
 export default function CropInformation() {
   const { favorites, toggleFavorite } = useContext(AppContext);
-
-  const navigation = useNavigation();
 
   const id = useLocalSearchParams().id;
   const crop = crops.find((crop) => crop.id === id);
@@ -29,7 +28,7 @@ export default function CropInformation() {
          bg-primary-200 flex-row items-center justify-between rounded-full"
         >
           <View className="flex-row items-center">
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <TouchableOpacity onPress={() => router.back()}>
               <Ionicons name="arrow-back-outline" size={24} color="#FFFF" />
             </TouchableOpacity>
             <View className="ml-2">
@@ -49,13 +48,23 @@ export default function CropInformation() {
         </View>
         <ScrollView showsVerticalScrollIndicator={false} className="space-y-4">
           <View>
-            <IDSection description={crop?.description} />
+            <IDSection
+              background={crop?.background}
+              description={crop?.description}
+            />
           </View>
           <View>
             <QuickInfoSection crop={crop} />
           </View>
           <View>
-            <PDBCSection pests={crop?.pests} diseases={crop?.diseases} />
+            <UsesSection uses={crop?.uses} />
+          </View>
+          <View>
+            <PDBCSection
+              pests={crop?.pests}
+              diseases={crop?.diseases}
+              beneficialCritters={crop?.beneficialCritters}
+            />
           </View>
         </ScrollView>
       </View>

@@ -4,7 +4,11 @@ import { View, Text, Image, Pressable } from 'react-native';
 import PDBCModal from '../modals/PDBCModal';
 import { AppContext } from '@/context/AppContext';
 
-export default function PDBCSection({ pests, diseases }: any) {
+export default function PDBCSection({
+  pests,
+  diseases,
+  beneficialCritters,
+}: any) {
   const { pDBCModalVisible, setPDBCModalVisible } = useContext(AppContext);
   const [pDBCName, setPDBCName] = useState<string>('');
   const [pDBCDescription, setPDBCDescription] = useState<string>('');
@@ -23,9 +27,7 @@ export default function PDBCSection({ pests, diseases }: any) {
         description={pDBCDescription}
       />
       <View className="gap-y-2">
-        <Text className="text-lg font-bold text-black dark:text-secondary-default">
-          Pests
-        </Text>
+        <Text className="text-lg font-bold text-secondary-200">Pests</Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {pests.map((pest: any) => (
             <Pressable
@@ -43,9 +45,7 @@ export default function PDBCSection({ pests, diseases }: any) {
         </View>
       </View>
       <View className="gap-y-2">
-        <Text className="text-lg font-bold text-black dark:text-secondary-default">
-          Deases
-        </Text>
+        <Text className="text-lg font-bold text-secondary-200">Deases</Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {diseases.map((disease: any) => (
             <Pressable
@@ -65,19 +65,22 @@ export default function PDBCSection({ pests, diseases }: any) {
         </View>
       </View>
       <View className="gap-y-2">
-        <Text className="text-lg font-bold text-black dark:text-secondary-default">
+        <Text className="text-lg font-bold text-secondary-200">
           Beneficial Critters
         </Text>
         <View className="flex-row flex-wrap justify-center gap-1">
-          {diseases.map((disease: any) => (
+          {beneficialCritters.map((beneficialCritter: any) => (
             <View
               style={{ elevation: 5 }}
-              key={disease.name}
+              key={beneficialCritter.name}
               className="relative"
             >
-              <Image source={disease.image} className="w-24 h-24 rounded-md" />
+              <Image
+                source={beneficialCritter.image}
+                className="w-24 h-24 rounded-md"
+              />
               <Text className="absolute bottom-1 left-1 text-white text-xs">
-                {disease.name}
+                {beneficialCritter.name}
               </Text>
             </View>
           ))}

@@ -63,6 +63,16 @@ export default function AppContextProvider({ children }: { children: any }) {
     }
   };
 
+  // const clearFavorites = async () => {
+  //   try {
+  //     await AsyncStorage.removeItem('favorites');
+  //     setFavorites([]);
+  //     console.log('Favorites cleared');
+  //   } catch (error) {
+  //     console.error('Failed to clear favorites:', error);
+  //   }
+  // };
+
   const AppContextValue = {
     selectedSeason,
     setSelectedSeason,

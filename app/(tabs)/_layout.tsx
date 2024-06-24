@@ -1,11 +1,14 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { useContext } from 'react';
 import { Tabs } from 'expo-router';
+import { View, Text } from 'react-native';
 
-import { AntDesign } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { AppContext } from '@/context/AppContext';
+
+import { AntDesign, Ionicons } from '@expo/vector-icons';
 
 export default function Tabslayout() {
+  const { favorites } = useContext(AppContext);
+
   return (
     <View className="flex-1 py-2 px-4 bg-secondary-100 dark:bg-accent-200">
       <Tabs
@@ -63,13 +66,18 @@ export default function Tabslayout() {
           options={{
             title: 'Favorites',
             tabBarIcon: ({ color, focused }) => (
-              <View className="mt-1">
+              <View className="mt-1 relative">
                 <AntDesign
                   name="hearto"
                   size={24}
                   color={color}
                   focuses={focused}
                 />
+                <View className="absolute -top-1 -right-3 px-1 bg-[#E74C3C] border border-primary-200 rounded-full">
+                  <Text className="text-xs text-secondary-default">
+                    {favorites.length}
+                  </Text>
+                </View>
               </View>
             ),
           }}
