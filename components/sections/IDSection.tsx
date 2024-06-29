@@ -1,12 +1,13 @@
-import React from 'react';
-import { View, Text, Image } from 'react-native';
+import React from "react";
+import { View, Text, Image } from "react-native";
 
 interface IDSectionProps {
   background: any;
-  description: string | undefined;
+  descriptions: string[] | undefined;
 }
 
-const IDSection: React.FC<IDSectionProps> = ({ background, description }) => {
+const IDSection: React.FC<IDSectionProps> = ({ background, descriptions }) => {
+  console.log(descriptions);
   return (
     <View className="gap-y-2">
       <Image
@@ -15,9 +16,13 @@ const IDSection: React.FC<IDSectionProps> = ({ background, description }) => {
         width={50}
         className="h-52 w-full rounded-xl overflow-hidden"
       />
-      <Text className="text-black dark:text-secondary-default">
-        {description}
-      </Text>
+      <View className="space-y-2">
+        {descriptions?.map((description, idx) => (
+          <Text key={idx} className="text-black dark:text-secondary-default">
+            {description}
+          </Text>
+        ))}
+      </View>
     </View>
   );
 };

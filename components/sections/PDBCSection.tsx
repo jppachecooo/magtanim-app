@@ -3,12 +3,14 @@ import { View, Text, Image, Pressable } from 'react-native';
 
 import PDBCModal from '../modals/PDBCModal';
 import { AppContext } from '@/context/AppContext';
+import { useTranslation } from 'react-i18next';
 
 export default function PDBCSection({
   pests,
   diseases,
   beneficialCritters,
 }: any) {
+  const { t } = useTranslation()
   const { pDBCModalVisible, setPDBCModalVisible } = useContext(AppContext);
   const [pDBCName, setPDBCName] = useState<string>('');
   const [pDBCDescription, setPDBCDescription] = useState<string>('');
@@ -27,7 +29,7 @@ export default function PDBCSection({
         description={pDBCDescription}
       />
       <View className="gap-y-2">
-        <Text className="text-lg font-bold text-secondary-200">Pests</Text>
+        <Text className="text-lg font-bold text-secondary-200">{t('pests')}</Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {pests?.map((pest: any) => (
             <Pressable
@@ -45,7 +47,7 @@ export default function PDBCSection({
         </View>
       </View>
       <View className="gap-y-2">
-        <Text className="text-lg font-bold text-secondary-200">Deases</Text>
+        <Text className="text-lg font-bold text-secondary-200">Diseases</Text>
         <View className="flex-row flex-wrap justify-center gap-1">
           {diseases?.map((disease: any) => (
             <Pressable

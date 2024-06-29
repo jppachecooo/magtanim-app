@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
-import { router, useLocalSearchParams } from 'expo-router';
+import React, { useContext } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { router, useLocalSearchParams } from "expo-router";
 
-import IDSection from '@/components/sections/IDSection';
-import QuickInfoSection from '@/components/sections/QuickInfoSection';
-import UsesSection from '@/components/sections/UsesSection';
-import PDBCSection from '@/components/sections/PDBCSection';
-import { AppContext } from '@/context/AppContext';
-import CropsList from '@/constants/crops';
+import IDSection from "@/components/sections/IDSection";
+import QuickInfoSection from "@/components/sections/QuickInfoSection";
+import UsesSection from "@/components/sections/UsesSection";
+import PDBCSection from "@/components/sections/PDBCSection";
+import { AppContext } from "@/context/AppContext";
+import CropsList from "@/constants/crops";
 
-import { Ionicons, Fontisto } from '@expo/vector-icons';
+import { Ionicons, Fontisto } from "@expo/vector-icons";
 
 export default function CropInformation() {
   const { favorites, toggleFavorite } = useContext(AppContext);
@@ -44,7 +44,7 @@ export default function CropInformation() {
             <Fontisto
               name="heart"
               size={24}
-              color={`${isFavorite ? '#E74C3C' : 'white'}`}
+              color={`${isFavorite ? "#E74C3C" : "white"}`}
             />
           </TouchableOpacity>
         </View>
@@ -52,7 +52,7 @@ export default function CropInformation() {
           <View>
             <IDSection
               background={crop?.background}
-              description={crop?.description}
+              descriptions={crop?.descriptions}
             />
           </View>
           <View>
