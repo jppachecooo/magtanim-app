@@ -29,7 +29,7 @@ export default function PDBCSection({
       <View className="gap-y-2">
         <Text className="text-lg font-bold text-secondary-200">Pests</Text>
         <View className="flex-row flex-wrap justify-center gap-1">
-          {pests.map((pest: any) => (
+          {pests?.map((pest: any) => (
             <Pressable
               onPress={() => handlePDBCClick(pest?.name, pest.description)}
               key={pest.name}
@@ -47,7 +47,7 @@ export default function PDBCSection({
       <View className="gap-y-2">
         <Text className="text-lg font-bold text-secondary-200">Deases</Text>
         <View className="flex-row flex-wrap justify-center gap-1">
-          {diseases.map((disease: any) => (
+          {diseases?.map((disease: any) => (
             <Pressable
               onPress={() =>
                 handlePDBCClick(disease?.name, disease.description)
@@ -69,7 +69,7 @@ export default function PDBCSection({
           Beneficial Critters
         </Text>
         <View className="flex-row flex-wrap justify-center gap-1">
-          {beneficialCritters.map((beneficialCritter: any) => (
+          {beneficialCritters?.map((beneficialCritter: any) => (
             <View
               style={{ elevation: 5 }}
               key={beneficialCritter.name}

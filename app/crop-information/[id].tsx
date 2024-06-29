@@ -3,17 +3,19 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { router, useLocalSearchParams } from 'expo-router';
 
-import crops from '@/constants/crops';
 import IDSection from '@/components/sections/IDSection';
 import QuickInfoSection from '@/components/sections/QuickInfoSection';
 import UsesSection from '@/components/sections/UsesSection';
 import PDBCSection from '@/components/sections/PDBCSection';
 import { AppContext } from '@/context/AppContext';
+import CropsList from '@/constants/crops';
 
 import { Ionicons, Fontisto } from '@expo/vector-icons';
 
 export default function CropInformation() {
   const { favorites, toggleFavorite } = useContext(AppContext);
+
+  const crops = CropsList();
 
   const id = useLocalSearchParams().id;
   const crop = crops.find((crop) => crop.id === id);
@@ -22,7 +24,7 @@ export default function CropInformation() {
 
   return (
     <SafeAreaView className="flex-1 bg-secondary-100 dark:bg-accent-200">
-      <View className="p-4 gap-y-4">
+      <View className="h-full py-2 px-4 gap-y-4">
         <View
           className="py-2 px-4
          bg-primary-200 flex-row items-center justify-between rounded-full"

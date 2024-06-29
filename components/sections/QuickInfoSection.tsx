@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, Pressable, Image } from 'react-native';
 import { useColorScheme } from 'nativewind';
+import { useTranslation } from 'react-i18next';
 
 import { AppContext } from '@/context/AppContext';
 import QInfoModal from '@/components/modals/QInfoModal';
@@ -8,12 +9,14 @@ import QInfoModal from '@/components/modals/QInfoModal';
 import { EvilIcons } from '@expo/vector-icons';
 
 const getSeasonIcon = (season: string | undefined) => {
+  const { t } = useTranslation();
+
   switch (season) {
-    case 'Wet':
+    case t('wet'):
       return require('@/assets/images/rain.png');
-    case 'Dry':
+    case t('dry'):
       return require('@/assets/images/sun.png');
-    case 'Wet/Dry':
+    case t('wetDry'):
       return require('@/assets/images/wet-dry.png');
     default:
       return require('@/assets/images/cycle.png');
@@ -22,6 +25,8 @@ const getSeasonIcon = (season: string | undefined) => {
 
 export default function QuickInfoSection({ crop }: any) {
   const { colorScheme } = useColorScheme();
+
+  const { t } = useTranslation();
 
   const { qInfoModalVisible, setQInfoModalVisible } = useContext(AppContext);
   const [qInfoModalTitle, setQInfoModalTitle] = useState<string>('');
@@ -79,7 +84,7 @@ export default function QuickInfoSection({ crop }: any) {
               />
             </View>
             <Text className="text-xs text-black dark:text-secondary-default">
-              Spacing
+              {t('spacing')}
             </Text>
             <Image
               source={require('@/assets/images/spacing.png')}
@@ -110,7 +115,7 @@ export default function QuickInfoSection({ crop }: any) {
               />
             </View>
             <Text className="text-xs text-black dark:text-secondary-default">
-              Depth
+              {t('depth')}
             </Text>
             <Image
               source={require('@/assets/images/depth.png')}
@@ -141,7 +146,7 @@ export default function QuickInfoSection({ crop }: any) {
               />
             </View>
             <Text className="text-xs text-black dark:text-secondary-default">
-              Water
+              {t('water')}
             </Text>
             <Image
               source={require('@/assets/images/water.png')}
@@ -178,7 +183,7 @@ export default function QuickInfoSection({ crop }: any) {
               />
             </View>
             <Text className="text-xs text-black dark:text-secondary-default">
-              Season
+              {t('season')}
             </Text>
             <Image source={seasonIcon} className="w-10 h-10 my-1" />
             <Text className="text-black dark:text-secondary-default">
@@ -206,7 +211,7 @@ export default function QuickInfoSection({ crop }: any) {
               />
             </View>
             <Text className="text-xs text-black dark:text-secondary-default">
-              Germination
+              {t('germination')}
             </Text>
             <Image
               source={require('@/assets/images/germination.png')}
@@ -238,8 +243,8 @@ export default function QuickInfoSection({ crop }: any) {
                 color={`${colorScheme === 'light' ? 'black' : 'white'}`}
               />
             </View>
-            <Text className="text-xs text-black dark:text-secondary-default">
-              Sprout to Harvest
+            <Text className="text-xs text-black dark:text-secondary-default text-center">
+              {t('sproutToHarvest')}
             </Text>
             <Image
               source={require('@/assets/images/calendar.png')}

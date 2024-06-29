@@ -1,8 +1,14 @@
-const categories = [
-  { name: 'Vegetables' },
-  { name: 'Fruits' },
-  { name: 'Herbs' },
-  { name: 'Root Crops' },
-];
+import { useTranslation } from 'react-i18next';
 
-export default categories;
+export default function Categories() {
+  const { t } = useTranslation();
+
+  const categories = [
+    { name: t('vegetable') },
+    { name: t('fruit') },
+    { name: t('herb') },
+    { name: t('rootCrop') },
+  ];
+
+  return categories;
+}

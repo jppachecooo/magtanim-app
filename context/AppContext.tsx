@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import crops from '@/constants/crops';
+import CropsList from '@/constants/crops';
 
 export const AppContext = createContext<any>(null);
 
@@ -26,6 +26,8 @@ export default function AppContextProvider({ children }: { children: any }) {
   const [qInfoModalVisible, setQInfoModalVisible] = useState<boolean>(false);
   const [pDBCModalVisible, setPDBCModalVisible] = useState<boolean>(false);
   const [favorites, setFavorites] = useState<IFavorites[]>([]);
+
+  const crops = CropsList();
 
   // Function the will fetch the favorite crops
   useEffect(() => {
@@ -62,16 +64,6 @@ export default function AppContextProvider({ children }: { children: any }) {
       console.error('Failed to toggle favorite:', error);
     }
   };
-
-  // const clearFavorites = async () => {
-  //   try {
-  //     await AsyncStorage.removeItem('favorites');
-  //     setFavorites([]);
-  //     console.log('Favorites cleared');
-  //   } catch (error) {
-  //     console.error('Failed to clear favorites:', error);
-  //   }
-  // };
 
   const AppContextValue = {
     selectedSeason,

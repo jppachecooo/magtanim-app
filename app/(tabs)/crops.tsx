@@ -9,19 +9,28 @@ import {
   Image,
 } from 'react-native';
 import { router } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 
 import Input from '@/components/ui/Input';
-import categories from '@/constants/categories';
-import crops from '@/constants/crops';
 import EmptyState from '@/components/EmptyState';
 import { AppContext } from '@/context/AppContext';
 
 import { Feather, AntDesign } from '@expo/vector-icons';
 
+import Categories from '@/constants/categories';
+import CropsList from '@/constants/crops';
+
 export default function Crops() {
+  const { t } = useTranslation();
+
   const { selectedSeason, setSelectedSeason } = useContext(AppContext);
-  const [activeCategory, setActiveCategory] = useState<string>('Vegetables');
+  const [activeCategory, setActiveCategory] = useState<string>(
+    `${t('vegetable')}`
+  );
   const [searchInput, setSearchInput] = useState<string>('');
+
+  const categories = Categories();
+  const crops = CropsList();
 
   const filteredCrops = crops.filter((crop) => {
     const seasonMatch = crop.season?.includes(selectedSeason);
@@ -43,7 +52,7 @@ export default function Crops() {
             type="text"
             value={searchInput}
             onChangeText={setSearchInput}
-            placeholder="Search crop..."
+            placeholder={`${t('searchCrop')}`}
           />
           <TouchableOpacity
             onPress={() => setSearchInput('')}
@@ -56,7 +65,7 @@ export default function Crops() {
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           <View className="flex-row gap-x-4">
-            {categories.map((category) => (
+            {categories?.map((category) => (
               <TouchableOpacity
                 key={category.name}
                 onPress={() => setActiveCategory(category.name)}
@@ -82,7 +91,7 @@ export default function Crops() {
         <View className="items-center h-screen pb-52">
           {selectedSeason.length !== 0 && (
             <View className="self-start flex-row items-center gap-x-1">
-              <Text className="text-secondary-200">Selected season:</Text>
+              <Text className="text-secondary-200">{t('selectedSeason')}:</Text>
               <TouchableOpacity onPress={() => setSelectedSeason('')}>
                 <Text className="font-semibold text-black dark:text-secondary-100">
                   {selectedSeason}
@@ -109,7 +118,14 @@ export default function Crops() {
             )}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
-            ListEmptyComponent={<EmptyState category={activeCategory} />}
+            ListEmptyComponent={
+              <EmptyState
+                title={`${t('cropNotFound')}`}
+                description={`${t(
+                  'cropNotFoundDescription'
+                )} (${activeCategory})`}
+              />
+            }
           />
         </View>
       </View>

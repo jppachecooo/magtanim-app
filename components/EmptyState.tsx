@@ -2,10 +2,11 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 
 interface EmptyStateProps {
-  category: string;
+  title: string;
+  description: string;
 }
 
-const EmptyState: React.FC<EmptyStateProps> = ({ category }) => {
+const EmptyState: React.FC<EmptyStateProps> = ({ title, description }) => {
   return (
     <View className="items-center justify-center gap-y-2">
       <Image
@@ -14,11 +15,9 @@ const EmptyState: React.FC<EmptyStateProps> = ({ category }) => {
         resizeMode="contain"
       />
       <Text className="font-bold text-black dark:text-secondary-default">
-        Crop not found
+        {title}
       </Text>
-      <Text className="text-xs text-secondary-200">
-        Try to change the active category ({category})
-      </Text>
+      <Text className="text-xs text-secondary-200">{description}</Text>
     </View>
   );
 };
